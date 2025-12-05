@@ -85,7 +85,6 @@ if __name__ == "__main__":
 
 {% endcode %}
 {% endtab %}
-
 {% tab title="JavaScript" %}
 {% code overflow="wrap" %}
 
