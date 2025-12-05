@@ -59,21 +59,22 @@ Only `model` and `messages` are required parameters for this model (and they are
 Run your modified code inside your development environment. Response time depends on many factors, but for simple prompts it rarely exceeds a few seconds.
 
 {% hint style="success" %}
-If you need a more detailed walkthrough for setting up your development environment and making a request step-by-step, feel free to use our **Quickstart guide**:  
-https://docs.aimlapi.com/quickstart/setting-up
+If you need a more detailed walkthrough for setting up your development environment and making a request step-by-step, feel free to use our [**Quickstart guide.**](https://docs.aimlapi.com/quickstart/setting-up)
 {% endhint %}
 
 </details>
 
 
 # API Schema
-<Здесь вставить схему OpenAPI
+>Здесь вставить схему OpenAPI
 
->
+
 
 ## Code Example
 
-### Python
+{% tabs %}
+{% tab title="Python" %}
+{% code overflow="wrap" %}
 
 ```python
 import asyncio
@@ -105,7 +106,10 @@ if __name__ == "__main__":
     main()
 ```
 
-### JavaScript
+{% endcode %}
+{% endtab %}
+{% tab title="JavaScript" %}
+{% code overflow="wrap" %}
 
 ```javascript
 const Anthropic = require('@anthropic-ai/sdk');
@@ -133,6 +137,10 @@ const main = async () => {
 
 main();
 ```
+
+{% endcode %}
+{% endtab %}
+{% endtabs %}
 
 ---
 
