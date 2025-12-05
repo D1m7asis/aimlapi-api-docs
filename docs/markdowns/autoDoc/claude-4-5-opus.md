@@ -1,11 +1,23 @@
 # Claude 4.5 Opus
-<table data-header-hidden data-full-width="true"><thead><tr><th width="100.4443969726562" valign="top"></th><th width="100.666748046875" valign="top"></th></tr></thead><tbody><tr><td valign="top"><div data-gb-custom-block data-tag="hint" data-style="info" class="hint hint-info"><p>This documentation is valid for the following list of our models:</p><ul><li><code>anthropic/claude-opus-4-5</code></li></ul></div></td><td valign="top"><a href="https://aimlapi.com/app/?model=claude-opus-4-5-20251101" class="button primary">Try in Playground</a></td></tr></tbody></table>
+
+{% columns %}
+{% column width="66.66666666666666%" %}
+{% hint style="info" %}
+This documentation is valid for the following list of our models:
+
+* `anthropic/claude-opus-4-5`
+  {% endhint %}
+  {% endcolumn %}
+
+{% column width="33.33333333333334%" %} <a href="https://aimlapi.com/app/?model=claude-opus-4-5-20251101" class="button primary">Try in Playground</a>
+{% endcolumn %}
+{% endcolumns %}
 
 ## Model Overview
 
-Claude 4.5 Opus is Anthropic’s flagship large language model, designed for complex agents and advanced software engineering workloads. It delivers high levels of intelligence, extended reasoning capability, and strong performance on challenging analytical and coding tasks.
+Claude 4.5 Opus is Anthropic’s flagship large language model designed for complex agents and advanced coding workloads. It provides high reasoning capability, strong general intelligence, and an extended context window suitable for demanding production use cases.
 
-The model supports text, code, and vision inputs with a context window of up to 200,000 tokens, making it suitable for long-context reasoning, multi-step problem solving, and image-to-text use cases in demanding production environments.
+Developed and served by Anthropic, the model supports text, code, and vision modalities, with up to 200,000 tokens of context. It is well suited for text-to-text and image-to-text (vision) tasks that require long-horizon reasoning and rich contextual understanding.
 
 ## How to Make a Call
 
