@@ -67,7 +67,9 @@ https://docs.aimlapi.com/quickstart/setting-up
 
 
 # API Schema
+<Здесь вставить схему OpenAPI
 
+>
 
 ## Code Example
 
