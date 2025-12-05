@@ -75,7 +75,6 @@ If you need a more detailed walkthrough for setting up your development environm
 {% tabs %}
 {% tab title="Python" %}
 {% code overflow="wrap" %}
-
 ```python
 import asyncio
 from anthropic import Anthropic
@@ -108,6 +107,7 @@ if __name__ == "__main__":
 
 {% endcode %}
 {% endtab %}
+
 {% tab title="JavaScript" %}
 {% code overflow="wrap" %}
 
