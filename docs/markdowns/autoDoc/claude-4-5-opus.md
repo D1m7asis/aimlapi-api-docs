@@ -65,6 +65,10 @@ https://docs.aimlapi.com/quickstart/setting-up
 
 </details>
 
+
+# API Schema
+
+
 ## Code Example
 
 ### Python
