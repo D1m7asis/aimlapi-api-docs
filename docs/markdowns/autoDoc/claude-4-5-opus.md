@@ -93,12 +93,12 @@ def main():
 
 if __name__ == "__main__":
     main()
-````
+```
 {% endcode %}
 {% endtab %}
+
 {% tab title="JavaScript" %}
 {% code overflow="wrap" %}
-
 ```javascript
 const Anthropic = require('@anthropic-ai/sdk');
 
@@ -125,11 +125,6 @@ const main = async () => {
 
 main();
 ```
-
 {% endcode %}
 {% endtab %}
 {% endtabs %}
-
----
-
-*Generated automatically from Jira issue `CCS-7`.*
