@@ -15,9 +15,9 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-Claude 4.5 Opus is Anthropic’s flagship large language model designed for complex agents and advanced coding workloads. It provides high intelligence, strong extended reasoning, and a large context window suitable for demanding production applications.
+Claude 4.5 Opus is Anthropic’s flagship large language model optimized for complex agents and advanced coding tasks. It offers strong reasoning capabilities, extended deliberation, and a large 200,000-token context window for handling long or multi-step interactions.
 
-The model supports text, code, and vision modalities with up to 200,000 tokens of context, and is optimized for text-to-text and image-to-text (vision) tasks across a wide range of enterprise and developer use cases.
+Developed and served by Anthropic, the model supports text, code, and vision modalities, and is suitable for text-to-text and image-to-text (vision) workloads where high reliability and advanced problem-solving are required.
 
 ## How to Make a Call
 
