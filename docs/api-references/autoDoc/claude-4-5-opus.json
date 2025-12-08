@@ -3,7 +3,7 @@
   "info": {
     "title": "Claude 4.5 Opus - AI/ML API",
     "version": "1.0.0",
-    "description": "Claude Opus 4.5 is Anthropic's flagship model for complex agents and advanced coding, offering maximum intelligence, extended reasoning, and a large context window at a lower price compared to Opus 4.1."
+    "description": "Claude 4.5 Opus is Anthropic’s flagship model optimized for complex agents and advanced coding tasks. It offers top-tier intelligence, extended reasoning, and a large context window at a lower price compared to Claude Opus 4.1."
   },
   "servers": [
     {
