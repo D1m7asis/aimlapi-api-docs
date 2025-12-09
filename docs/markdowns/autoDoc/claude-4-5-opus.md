@@ -134,4 +134,4 @@ main();
 
 {% endcode %}
 
-</details> ```` [Generated from CCS-7]! - Delete if needed
+</details> ````md [Generated from CCS-7]! - Delete if needed
