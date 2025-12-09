@@ -15,9 +15,9 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-Claude 4.5 Opus is Anthropic’s flagship large language model, optimized for complex agents and advanced software engineering workflows. It provides high reasoning depth, strong general intelligence, and a large 200,000-token context window suitable for long, multi-step interactions.
+Claude 4.5 Opus is Anthropic’s flagship large language model designed for complex agents and advanced coding workloads. It provides high levels of intelligence and extended reasoning capabilities, making it suitable for demanding production use cases.
 
-Developed by Anthropic and served via the Anthropic (Claude API) provider, the model supports text, code, and vision modalities and is designed for tasks such as text-to-text generation and image-to-text understanding in demanding production environments.
+The model supports text, code, and vision modalities, with a context window of up to 200,000 tokens and is optimized for both text-to-text and image-to-text (vision) tasks.
 
 ## How to Make a Call
 
@@ -48,8 +48,7 @@ Only `model` and `messages` are required parameters for this model (and they are
 Run your modified code inside your development environment. Response time depends on many factors, but for simple prompts it rarely exceeds a few seconds.
 
 {% hint style="success" %}
-If you need a more detailed walkthrough for setting up your development environment and making a request step-by-step, feel free to use our **Quickstart guide**:  
-https://docs.aimlapi.com/quickstart/setting-up
+If you need a more detailed walkthrough for setting up your development environment and making a request step-by-step, feel free to use our [**Quickstart guide.**](https://docs.aimlapi.com/quickstart/setting-up)
 {% endhint %}
 
 </details>
@@ -64,7 +63,7 @@ https://docs.aimlapi.com/quickstart/setting-up
 
 {% tabs %}
 {% tab title="Python" %}
-{% code overflow="wrap" %}
+{% code overflow="scroll" %}
 ```python
 import asyncio
 from anthropic import Anthropic
@@ -80,12 +79,12 @@ def main():
         model="anthropic/claude-opus-4-5",
         max_tokens=2048,
         system="You are an AI assistant who knows everything.",
-        messages=[​
-            {​
+        messages=[
+            {
                 "role": "user",
                 "content": "Hello, Claude",
-            }​
-        ],​
+            }
+        ],
     )
 
     print("Message:", message.content)
@@ -94,30 +93,30 @@ def main():
 if __name__ == "__main__":
     main()
 ```
-
 {% endcode %}
 {% endtab %}
 {% tab title="JavaScript" %}
-{% code overflow="wrap" %}
+{% code overflow="scroll" %}
+
 ```javascript
 const Anthropic = require('@anthropic-ai/sdk');
 
-const api = new Anthropic({​
+const api = new Anthropic({
   baseURL: 'https://api.aimlapi.com/',
   authToken: '<YOUR_API_KEY>',
 });
 
-const main = async () => {​
-  const message = await api.messages.create({​
+const main = async () => {
+  const message = await api.messages.create({
     model: 'anthropic/claude-opus-4-5',
     max_tokens: 2048,
     system: 'You are an AI assistant who knows everything.',
-    messages: [​
-      {​
+    messages: [
+      {
         role: 'user',
         content: 'Tell me, why is the sky blue?',
-      },​
-    ],​
+      },
+    ],
   });
 
   console.log('Message:', message);
@@ -125,7 +124,6 @@ const main = async () => {​
 
 main();
 ```
-
 {% endcode %}
 {% endtab %}
 {% endtabs %}
