@@ -80,12 +80,12 @@ def main():
         model="anthropic/claude-opus-4-5",
         max_tokens=2048,
         system="You are an AI assistant who knows everything.",
-        messages=[ 
-            { 
+        messages=[​
+            {​
                 "role": "user",
-                "content": "Hello, Claude", 
-            } 
-        ], 
+                "content": "Hello, Claude",
+            }​
+        ],​
     )
 
     print("Message:", message.content)
@@ -99,26 +99,25 @@ if __name__ == "__main__":
 
 {% tab title="JavaScript" %}
 {% code overflow="wrap" %}
-
 ```javascript
 const Anthropic = require('@anthropic-ai/sdk');
 
-const api = new Anthropic({
+const api = new Anthropic({​
   baseURL: 'https://api.aimlapi.com/',
   authToken: '<YOUR_API_KEY>',
 });
 
-const main = async () => {
-  const message = await api.messages.create({
+const main = async () => {​
+  const message = await api.messages.create({​
     model: 'anthropic/claude-opus-4-5',
     max_tokens: 2048,
     system: 'You are an AI assistant who knows everything.',
-    messages: [ 
-      { 
+    messages: [​
+      {​
         role: 'user',
-        content: 'Tell me, why is the sky blue?', 
-      }, 
-    ], 
+        content: 'Tell me, why is the sky blue?',
+      },​
+    ],​
   });
 
   console.log('Message:', message);
@@ -126,7 +125,6 @@ const main = async () => {
 
 main();
 ```
-
 {% endcode %}
 {% endtab %}
 {% endtabs %}
