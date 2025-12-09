@@ -1,4 +1,4 @@
-# Kling 2.6 Pro (image-to-video, text-to-video)
+# Kling 2.6 Pro image-to-video & text-to-video
 
 {% columns %}
 {% column width="66.66666666666666%" %}
@@ -17,9 +17,9 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-Kling 2.6 Pro is a cinematic video generation model from KlingAI, served via fal.ai, designed to produce high-quality videos with smooth, realistic motion and detailed visuals. It natively supports video and audio modalities, enabling generation of videos that can include synchronized sound.
+Kling 2.6 Pro is a next-generation cinematic video generation model from KlingAI, available via fal.ai. It produces smooth, realistic motion with detailed imagery and supports native audio generation, making it suitable for visually rich, production-style content.
 
-The model supports both image-to-video animation of static images and text-to-video generation, making it suitable for creating promotional content, advertisements, social media clips, and rapid video mockups where fast, high-fidelity visual storytelling is required.
+The model supports video, audio, vision, and text modalities, and is optimized for image-to-video, text-to-video, and video generation with optional sound. Typical use cases include promotional videos, advertisements, social media clips, and rapid video mockups driven by either text prompts or source images.
 ## How to Make a Call
 
 <details>
@@ -115,36 +115,7 @@ main()
 {% code overflow="wrap" %}
 
 ```json5
-{
-  "id": "video-gen-1234567890",
-  "object": "video.generation",
-  "model": "klingai/video-v2-6-pro-image-to-video",
-  "created": 1739270400,
-  "status": "succeeded",
-  "input": {
-    "prompt": "A jellyfish in the ocean",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/35/Maldivesfish2.jpg",
-    "duration": 5,
-    "resolution": "1280x720"
-  },
-  "output": {
-    "videos": [
-      {
-        "url": "https://cdn.aimlapi.com/videos/video-gen-1234567890/output.mp4",
-        "thumbnail_url": "https://cdn.aimlapi.com/videos/video-gen-1234567890/thumbnail.jpg",
-        "duration": 5.02,
-        "resolution": "1280x720",
-        "has_audio": true,
-        "format": "mp4"
-      }
-    ]
-  },
-  "usage": {
-    "credits": 1,
-    "input_tokens": 0,
-    "output_tokens": 0
-  }
-}
+{'id': 'vid-gen-1733749272-qJ8LmP4xK2aN7sDf', 'object': 'video.generation', 'model': 'klingai/video-v2-6-pro-image-to-video', 'status': 'processing', 'created': 1733749272, 'output': null, 'meta': {'duration_seconds': 5, 'resolution': '720x1280', 'has_audio': true}, 'usage': {'input_tokens': 0, 'output_tokens': 0, 'total_tokens': 0}}
 ```
 
 {% endcode %}
