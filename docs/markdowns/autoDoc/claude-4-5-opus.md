@@ -60,6 +60,7 @@ https://docs.aimlapi.com/quickstart/setting-up
 ## Code Example
 
 {% tabs %}{% tab title="Python" %}{% code overflow="wrap" %}
+
 ```python
 import asyncio
 from anthropic import Anthropic
@@ -89,6 +90,7 @@ def main():
 if __name__ == "__main__":
     main()
 ```
+
 {% endcode %}{% endtab %}{% tab title="JavaScript" %}{% code overflow="wrap" %}
 
 ```javascript
@@ -118,4 +120,39 @@ const main = async () => {
 main();
 ```
 
-{% endcode %}{% endtab %}{% endtabs %}Done!
+{% endcode %}{% endtab %}{% endtabs %}
+
+<details>
+
+<summary>Response</summary>
+
+{% code overflow="wrap" %}
+
+```json5
+{
+  id: 'chatcmpl-01QfRmDBXVWcARjbwZBbJxrR',
+  object: 'chat.completion',
+  model: 'anthropic/claude-opus-4-5',
+  choices: [
+    {
+      index: 0,
+      message: {
+        role: 'assistant',
+        content: 'Hello! Claude 4.5 Opus here. How can I help you today?',
+      },
+      finish_reason: 'stop',
+      logprobs: null,
+    },
+  ],
+  created: 1744218440,
+  usage: {
+    prompt_tokens: 18,
+    completion_tokens: 32,
+    total_tokens: 50,
+  },
+}
+```
+
+{% endcode %}
+
+</details>Done!
