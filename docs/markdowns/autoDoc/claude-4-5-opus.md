@@ -129,28 +129,7 @@ main();
 {% code overflow="wrap" %}
 
 ```json5
-{
-  id: 'chatcmpl-01QfRmDBXVWcARjbwZBbJxrR',
-  object: 'chat.completion',
-  model: 'anthropic/claude-opus-4-5',
-  choices: [
-    {
-      index: 0,
-      message: {
-        role: 'assistant',
-        content: 'Hello! Claude 4.5 Opus here. How can I help you today?',
-      },
-      finish_reason: 'stop',
-      logprobs: null,
-    },
-  ],
-  created: 1744218440,
-  usage: {
-    prompt_tokens: 18,
-    completion_tokens: 32,
-    total_tokens: 50,
-  },
-}
+{'id': 'msg_01JDNQAF0XYZ1234TEST', 'object': 'chat.completion', 'created': 1744300000, 'model': 'anthropic/claude-opus-4-5', 'choices': [{'index': 0, 'finish_reason': 'stop', 'logprobs': null, 'message': {'role': 'assistant', 'content': 'Hello! It is great to meet you. How can I help you today?', 'refusal': null}}], 'usage': {'prompt_tokens': 10, 'completion_tokens': 22, 'total_tokens': 32}}
 ```
 
 {% endcode %}
