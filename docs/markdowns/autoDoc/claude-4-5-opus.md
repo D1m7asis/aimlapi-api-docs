@@ -69,62 +69,61 @@ https://docs.aimlapi.com/quickstart/setting-up
 import asyncio
 from anthropic import Anthropic
 
-client = Anthropic(​
-    base_url="https://api.aimlapi.com/",​
-    auth_token="<YOUR_API_KEY>",​
-)​
+client = Anthropic(
+    base_url="https://api.aimlapi.com/",
+    auth_token="<YOUR_API_KEY>",
+)
 
 
-def main():​
-    message = client.messages.create(​
-        model="anthropic/claude-opus-4-5",​
-        max_tokens=2048,​
-        system="You are an AI assistant who knows everything.",​
+def main():
+    message = client.messages.create(
+        model="anthropic/claude-opus-4-5",
+        max_tokens=2048,
+        system="You are an AI assistant who knows everything.",
         messages=[​
             {​
-                "role": "user",​
-                "content": "Hello, Claude",​
+                "role": "user",
+                "content": "Hello, Claude",
             }​
         ],​
-    )​
+    )
 
-    print("Message:", message.content)​
+    print("Message:", message.content)
 
 
-if __name__ == "__main__":​
-    main()​
+if __name__ == "__main__":
+    main()
 ```
+
 {% endcode %}
 {% endtab %}
-
 {% tab title="JavaScript" %}
 {% code overflow="wrap" %}
-
 ```javascript
-const Anthropic = require('@anthropic-ai/sdk');​
+const Anthropic = require('@anthropic-ai/sdk');
 
 const api = new Anthropic({​
-  baseURL: 'https://api.aimlapi.com/',​
-  authToken: '<YOUR_API_KEY>',​
-});​
+  baseURL: 'https://api.aimlapi.com/',
+  authToken: '<YOUR_API_KEY>',
+});
 
 const main = async () => {​
   const message = await api.messages.create({​
-    model: 'anthropic/claude-opus-4-5',​
-    max_tokens: 2048,​
-    system: 'You are an AI assistant who knows everything.',​
+    model: 'anthropic/claude-opus-4-5',
+    max_tokens: 2048,
+    system: 'You are an AI assistant who knows everything.',
     messages: [​
       {​
-        role: 'user',​
-        content: 'Tell me, why is the sky blue?',​
+        role: 'user',
+        content: 'Tell me, why is the sky blue?',
       },​
     ],​
-  });​
+  });
 
-  console.log('Message:', message);​
-};​
+  console.log('Message:', message);
+};
 
-main();​
+main();
 ```
 
 {% endcode %}
