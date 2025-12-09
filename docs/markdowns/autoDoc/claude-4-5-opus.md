@@ -15,9 +15,9 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-Claude 4.5 Opus is Anthropic’s flagship large language model optimized for complex agents and advanced coding tasks. It offers strong reasoning capabilities, extended deliberation, and a large 200,000-token context window for handling long or multi-step interactions.
+Claude 4.5 Opus is Anthropic’s flagship large language model, optimized for complex agents and advanced software engineering workflows. It provides high reasoning depth, strong general intelligence, and a large 200,000-token context window suitable for long, multi-step interactions.
 
-Developed and served by Anthropic, the model supports text, code, and vision modalities, and is suitable for text-to-text and image-to-text (vision) workloads where high reliability and advanced problem-solving are required.
+Developed by Anthropic and served via the Anthropic (Claude API) provider, the model supports text, code, and vision modalities and is designed for tasks such as text-to-text generation and image-to-text understanding in demanding production environments.
 
 ## How to Make a Call
 
@@ -80,7 +80,7 @@ def main():
         model="anthropic/claude-opus-4-5",
         max_tokens=2048,
         system="You are an AI assistant who knows everything.",
-        messages=[
+        messages= [
             {
                 "role": "user",
                 "content": "Hello, Claude",
