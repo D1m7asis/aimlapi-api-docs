@@ -80,7 +80,7 @@ def main():
         model="anthropic/claude-opus-4-5",
         max_tokens=2048,
         system="You are an AI assistant who knows everything.",
-        messages= [
+        messages=[
             {
                 "role": "user",
                 "content": "Hello, Claude",
@@ -99,6 +99,7 @@ if __name__ == "__main__":
 
 {% tab title="JavaScript" %}
 {% code overflow="wrap" %}
+
 ```javascript
 const Anthropic = require('@anthropic-ai/sdk');
 
@@ -125,6 +126,7 @@ const main = async () => {
 
 main();
 ```
+
 {% endcode %}
 {% endtab %}
 {% endtabs %}
