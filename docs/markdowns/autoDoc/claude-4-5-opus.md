@@ -80,12 +80,12 @@ def main():
         model="anthropic/claude-opus-4-5",
         max_tokens=2048,
         system="You are an AI assistant who knows everything.",
-        messages=[
-            {
+        messages=[ 
+            { 
                 "role": "user",
-                "content": "Hello, Claude",
-            }
-        ],
+                "content": "Hello, Claude", 
+            } 
+        ], 
     )
 
     print("Message:", message.content)
@@ -113,12 +113,12 @@ const main = async () => {
     model: 'anthropic/claude-opus-4-5',
     max_tokens: 2048,
     system: 'You are an AI assistant who knows everything.',
-    messages: [
-      {
+    messages: [ 
+      { 
         role: 'user',
-        content: 'Tell me, why is the sky blue?',
-      },
-    ],
+        content: 'Tell me, why is the sky blue?', 
+      }, 
+    ], 
   });
 
   console.log('Message:', message);
