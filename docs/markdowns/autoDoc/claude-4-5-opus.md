@@ -64,7 +64,6 @@ If you need a more detailed walkthrough for setting up your development environm
 {% tabs %}
 {% tab title="Python" %}
 {% code overflow="wrap" %}
-```python
 import asyncio
 from anthropic import Anthropic
 
@@ -72,6 +71,8 @@ client = Anthropic(
     base_url="https://api.aimlapi.com/",
     auth_token="<YOUR_API_KEY>",
 )
+
+
 def main():
     message = client.messages.create(
         model="anthropic/claude-opus-4-5",
@@ -84,21 +85,23 @@ def main():
             }
         ],
     )
+
     print("Message:", message.content)
+
+
 if __name__ == "__main__":
     main()
-```
 {% endcode %}
 {% endtab %}
-
 {% tab title="JavaScript" %}
 {% code overflow="wrap" %}
-```javascript
 const Anthropic = require('@anthropic-ai/sdk');
+
 const api = new Anthropic({
   baseURL: 'https://api.aimlapi.com/',
   authToken: '<YOUR_API_KEY>',
 });
+
 const main = async () => {
   const message = await api.messages.create({
     model: 'anthropic/claude-opus-4-5',
@@ -111,10 +114,11 @@ const main = async () => {
       },
     ],
   });
+
   console.log('Message:', message);
 };
+
 main();
-```
 {% endcode %}
 {% endtab %}
 {% endtabs %}
