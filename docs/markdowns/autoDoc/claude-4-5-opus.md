@@ -63,7 +63,7 @@ If you need a more detailed walkthrough for setting up your development environm
 
 {% tabs %}
 {% tab title="Python" %}
-{% code overflow="scroll" %}
+{% code overflow="wrap" %}
 ```python
 import asyncio
 from anthropic import Anthropic
@@ -93,10 +93,12 @@ def main():
 if __name__ == "__main__":
     main()
 ```
+
 {% endcode %}
 {% endtab %}
+
 {% tab title="JavaScript" %}
-{% code overflow="scroll" %}
+{% code overflow="wrap" %}
 
 ```javascript
 const Anthropic = require('@anthropic-ai/sdk');
@@ -124,6 +126,7 @@ const main = async () => {
 
 main();
 ```
+
 {% endcode %}
 {% endtab %}
 {% endtabs %}
