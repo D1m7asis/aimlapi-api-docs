@@ -18,7 +18,6 @@ This documentation is valid for the following list of our models:
 Claude 4.5 Opus is Anthropic’s flagship large language model designed for complex agents and advanced coding scenarios. It provides high intelligence, strong reasoning capabilities, and support for large context windows, making it suitable for demanding production workloads.
 
 The model supports text, code, and vision modalities, with up to 200,000 tokens of context and is optimized for text-to-text and image-to-text (vision) tasks. It is developed and maintained by Anthropic and is intended for applications that require reliable, high-capacity multimodal understanding.
-
 ## How to Make a Call
 
 <details>
@@ -54,10 +53,8 @@ https://docs.aimlapi.com/quickstart/setting-up
 
 </details>
 
-
 # API Schema
 >Здесь вставить схему OpenAPI
-
 
 
 ## Code Example
