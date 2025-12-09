@@ -64,66 +64,13 @@ If you need a more detailed walkthrough for setting up your development environm
 {% tabs %}
 {% tab title="Python" %}
 {% code overflow="wrap" %}
-```
-import asyncio
-from anthropic import Anthropic
-
-client = Anthropic(
-    base_url="https://api.aimlapi.com/",
-    auth_token="<YOUR_API_KEY>",
-)
-
-
-def main():
-    message = client.messages.create(
-        model="anthropic/claude-opus-4-5",
-        max_tokens=2048,
-        system="You are an AI assistant who knows everything.",
-        messages=[
-            {
-                "role": "user",
-                "content": "Hello, Claude",
-            }
-        ],
-    )
-
-    print("Message:", message.content)
-
-
-if __name__ == "__main__":
-    main()
-```
+{% include "git+https://github.com/aimlapi/model-code-snippets.git/python/anthropic-claude-opus-4-5.md" %}
 {% endcode %}
 {% endtab %}
 
 {% tab title="JavaScript" %}
 {% code overflow="wrap" %}
-```
-const Anthropic = require('@anthropic-ai/sdk');
-
-const api = new Anthropic({
-  baseURL: 'https://api.aimlapi.com/',
-  authToken: '<YOUR_API_KEY>',
-});
-
-const main = async () => {
-  const message = await api.messages.create({
-    model: 'anthropic/claude-opus-4-5',
-    max_tokens: 2048,
-    system: 'You are an AI assistant who knows everything.',
-    messages: [
-      {
-        role: 'user',
-        content: 'Tell me, why is the sky blue?',
-      },
-    ],
-  });
-
-  console.log('Message:', message);
-};
-
-main();
-```
+{% include "git+https://github.com/aimlapi/model-code-snippets.git/javascript/anthropic-claude-opus-4-5.md" %}
 {% endcode %}
 {% endtab %}
 {% endtabs %}
