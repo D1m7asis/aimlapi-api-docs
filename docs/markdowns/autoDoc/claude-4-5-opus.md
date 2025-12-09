@@ -15,9 +15,9 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-Claude 4.5 Opus is Anthropic’s flagship large language model, optimized for complex agents, advanced coding tasks, and other high-difficulty reasoning workloads. It provides maximum reasoning depth and extended thinking capabilities compared to earlier Opus versions.
+Claude 4.5 Opus is Anthropic’s flagship large language model designed for complex agents and advanced coding scenarios. It provides high intelligence, strong reasoning capabilities, and support for large context windows, making it suitable for demanding production workloads.
 
-The model supports text, code, and vision modalities, with a context window of up to 200,000 tokens. It is well suited for text-to-text and image-to-text (vision) tasks in production environments where high intelligence and long-context handling are required.
+The model supports text, code, and vision modalities, with up to 200,000 tokens of context and is optimized for text-to-text and image-to-text (vision) tasks. It is developed and maintained by Anthropic and is intended for applications that require reliable, high-capacity multimodal understanding.
 
 ## How to Make a Call
 
@@ -48,7 +48,8 @@ Only `model` and `messages` are required parameters for this model (and they are
 Run your modified code inside your development environment. Response time depends on many factors, but for simple prompts it rarely exceeds a few seconds.
 
 {% hint style="success" %}
-If you need a more detailed walkthrough for setting up your development environment and making a request step-by-step, feel free to use our [**Quickstart guide.**](https://docs.aimlapi.com/quickstart/setting-up)
+If you need a more detailed walkthrough for setting up your development environment and making a request step-by-step, feel free to use our **Quickstart guide**:  
+https://docs.aimlapi.com/quickstart/setting-up
 {% endhint %}
 
 </details>
@@ -61,16 +62,65 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## Code Example
 
-{% tabs %}
-{% tab title="Python" %}
-{% code overflow="wrap" %}
-{% include "git+https://github.com/aimlapi/model-code-snippets.git/python/anthropic-claude-opus-4-5.md" %}
-{% endcode %}
-{% endtab %}
+{% tabs %}{% tab title="Python" %}{% code overflow="wrap" %}
 
-{% tab title="JavaScript" %}
-{% code overflow="wrap" %}
-{% include "git+https://github.com/aimlapi/model-code-snippets.git/javascript/anthropic-claude-opus-4-5.md" %}
-{% endcode %}
-{% endtab %}
-{% endtabs %}
+```python
+import asyncio
+from anthropic import Anthropic
+
+client = Anthropic(
+    base_url="https://api.aimlapi.com/",
+    auth_token="<YOUR_API_KEY>",
+)
+
+
+def main():
+    message = client.messages.create(
+        model="anthropic/claude-opus-4-5",
+        max_tokens=2048,
+        system="You are an AI assistant who knows everything.",
+        messages=[
+            {
+                "role": "user",
+                "content": "Hello, Claude",
+            }
+        ],
+    )
+
+    print("Message:", message.content)
+
+
+if __name__ == "__main__":
+    main()
+```
+
+{% endcode %}{% endtab %}{% tab title="JavaScript" %}{% code overflow="wrap" %}
+
+```javascript
+const Anthropic = require('@anthropic-ai/sdk');
+
+const api = new Anthropic({
+  baseURL: 'https://api.aimlapi.com/',
+  authToken: '<YOUR_API_KEY>',
+});
+
+const main = async () => {
+  const message = await api.messages.create({
+    model: 'anthropic/claude-opus-4-5',
+    max_tokens: 2048,
+    system: 'You are an AI assistant who knows everything.',
+    messages: [
+      {
+        role: 'user',
+        content: 'Tell me, why is the sky blue?',
+      },
+    ],
+  });
+
+  console.log('Message:', message);
+};
+
+main();
+```
+
+{% endcode %}{% endtab %}{% endtabs %}
