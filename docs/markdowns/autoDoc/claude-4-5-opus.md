@@ -59,62 +59,144 @@ If you need a more detailed walkthrough for setting up your development environm
 
 
 
+```md
 ## Code Example
 
-{% tabs %}
-{% tab title="Python" %}
-{% code overflow="wrap" %}
+### Python (requests)
+
 ```python
-import asyncio
-from anthropic import Anthropic
+import requests
+import json
 
-client = Anthropic(
-    base_url="https://api.aimlapi.com/",
-    auth_token="<YOUR_API_KEY>",
-)
-def main():
-    message = client.messages.create(
-        model="anthropic/claude-opus-4-5",
-        max_tokens=2048,
-        system="You are an AI assistant who knows everything.",
-        messages=[
-            {
-                "role": "user",
-                "content": "Hello, Claude",
-            }
-        ],
-    )
-    print("Message:", message.content)
-if __name__ == "__main__":
-    main()
+API_URL = "https://api.your-ml-service.com/v1/predict"
+API_KEY = "YOUR_API_KEY"
+
+headers = {
+    "Authorization": f"Bearer {API_KEY}",
+    "Content-Type": "application/json",
+}
+
+payload = {
+    "model": "your-model-name",
+    "input": {
+        # Replace with the specific fields your model expects
+        "text": "Classify this sentence",
+        "metadata": {
+            "language": "en"
+        }
+    },
+    # Optional: model-specific configuration
+    "params": {
+        "temperature": 0.2,
+        "top_p": 0.9
+    }
+}
+
+response = requests.post(API_URL, headers=headers, data=json.dumps(payload))
+response.raise_for_status()
+
+result = response.json()
+print(json.dumps(result, indent=2))
 ```
-{% endcode %}
-{% endtab %}
 
-{% tab title="JavaScript" %}
-{% code overflow="wrap" %}
-```javascript
-const Anthropic = require('@anthropic-ai/sdk');
-const api = new Anthropic({
-  baseURL: 'https://api.aimlapi.com/',
-  authToken: '<YOUR_API_KEY>',
-});
-const main = async () => {
-  const message = await api.messages.create({
-    model: 'anthropic/claude-opus-4-5',
-    max_tokens: 2048,
-    system: 'You are an AI assistant who knows everything.',
-    messages: [
-      {
-        role: 'user',
-        content: 'Tell me, why is the sky blue?',
+---
+
+### JavaScript (Node.js, fetch)
+
+```js
+import fetch from "node-fetch";
+
+const API_URL = "https://api.your-ml-service.com/v1/predict";
+const API_KEY = "YOUR_API_KEY";
+
+async function runInference() {
+  const payload = {
+    model: "your-model-name",
+    input: {
+      // Replace with the specific fields your model expects
+      text: "Classify this sentence",
+      metadata: {
+        language: "en",
       },
-    ],
+    },
+    // Optional: model-specific configuration
+    params: {
+      temperature: 0.2,
+      top_p: 0.9,
+    },
+  };
+
+  const response = await fetch(API_URL, {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${API_KEY}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(payload),
   });
-  console.log('Message:', message);
-};
-main();
+
+  if (!response.ok) {
+    const errorBody = await response.text();
+    throw new Error(`Request failed: ${response.status} - ${errorBody}`);
+  }
+
+  const result = await response.json();
+  console.log(JSON.stringify(result, null, 2));
+}
+
+runInference().catch(console.error);
 ```
-{% endcode %}
-{% endtab %}
-{% endtabs %}
+
+---
+
+### curl
+
+```bash
+API_KEY="YOUR_API_KEY"
+
+curl -X POST "https://api.your-ml-service.com/v1/predict" 
+  -H "Authorization: Bearer ${API_KEY}" 
+  -H "Content-Type: application/json" 
+  -d '{
+    "model": "your-model-name",
+    "input": {
+      "text": "Classify this sentence",
+      "metadata": {
+        "language": "en"
+      }
+    },
+    "params": {
+      "temperature": 0.2,
+      "top_p": 0.9
+    }
+  }'
+```
+
+---
+
+### Response example
+
+```json
+{
+  "id": "req_abc123",
+  "model": "your-model-name",
+  "created": 1733741250,
+  "input": {
+    "text": "Classify this sentence",
+    "metadata": {
+      "language": "en"
+    }
+  },
+  "output": {
+    "label": "positive",
+    "score": 0.94,
+    "explanation": "The text contains positive sentiment."
+  },
+  "usage": {
+    "input_tokens": 14,
+    "output_tokens": 22,
+    "total_tokens": 36
+  }
+}
+```
+```
