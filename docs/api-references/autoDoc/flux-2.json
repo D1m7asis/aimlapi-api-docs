@@ -3,7 +3,7 @@
   "info": {
     "title": "Flux 2 - AI/ML API",
     "version": "1.0.0",
-    "description": "Flux 2 is the latest generation of Flux image models on fal.ai, supporting text-to-image, image-to-image, LoRA-based customization, and pro-quality rendering. It is optimized for creating detailed illustrations, promotional visuals, and artistic scenes with megapixel-based pricing."
+    "description": "Flux 2 is a new generation of Flux image models on fal.ai that supports text-to-image, image-to-image, LoRA-based customization, and high-quality pro rendering. It is designed for generating detailed illustrations, promo images, and artistic scenes with flexible per-megapixel pricing."
   },
   "servers": [
     {
@@ -24,23 +24,13 @@
                   "model": {
                     "type": "string",
                     "enum": [
-                      "blackforestlabs/flux-2-pro-edit"
+                      "blackforestlabs/flux-2"
                     ]
                   },
                   "prompt": {
                     "type": "string",
                     "maxLength": 4000,
                     "description": "The text prompt describing the content, style, or composition of the image to be generated."
-                  },
-                  "image_urls": {
-                    "type": "array",
-                    "items": {
-                      "type": "string",
-                      "format": "uri"
-                    },
-                    "minItems": 1,
-                    "maxItems": 3,
-                    "description": "List of URLs or local Base64 encoded images to edit."
                   },
                   "image_size": {
                     "anyOf": [
@@ -87,36 +77,56 @@
                     "default": "png",
                     "description": "The format of the generated image."
                   },
+                  "enable_prompt_expansion": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "If set to True, prompt will be upsampled with more details."
+                  },
+                  "num_images": {
+                    "type": "number",
+                    "minimum": 1,
+                    "maximum": 4,
+                    "default": 1,
+                    "description": "The number of images to generate."
+                  },
                   "seed": {
                     "type": "integer",
                     "minimum": 1,
                     "description": "The same seed and the same prompt given to the same version of the model will output the same image every time."
                   },
+                  "guidance_scale": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 20,
+                    "description": "The CFG (Classifier Free Guidance) scale is a measure of how close you want the model to stick to your prompt when looking for a related image to show you."
+                  },
+                  "num_inference_steps": {
+                    "type": "integer",
+                    "minimum": 4,
+                    "maximum": 50,
+                    "description": "The number of inference steps to perform."
+                  },
+                  "acceleration": {
+                    "type": "string",
+                    "enum": [
+                      "none",
+                      "regular",
+                      "high"
+                    ],
+                    "default": "regular",
+                    "description": "The speed of the generation. The higher the speed, the faster the generation."
+                  },
                   "enable_safety_checker": {
                     "type": "boolean",
                     "default": true,
                     "description": "If set to True, the safety checker will be enabled."
-                  },
-                  "safety_tolerance": {
-                    "type": "string",
-                    "enum": [
-                      "1",
-                      "2",
-                      "3",
-                      "4",
-                      "5",
-                      "6"
-                    ],
-                    "default": "2",
-                    "description": "The safety tolerance level for the generated image. 1 being the most strict and 5 being the most permissive."
                   }
                 },
                 "required": [
                   "model",
-                  "prompt",
-                  "image_urls"
+                  "prompt"
                 ],
-                "title": "blackforestlabs/flux-2-pro-edit"
+                "title": "blackforestlabs/flux-2"
               }
             }
           }
@@ -192,23 +202,13 @@
                   "model": {
                     "type": "string",
                     "enum": [
-                      "blackforestlabs/flux-2-pro-edit"
+                      "blackforestlabs/flux-2"
                     ]
                   },
                   "prompt": {
                     "type": "string",
                     "maxLength": 4000,
                     "description": "The text prompt describing the content, style, or composition of the image to be generated."
-                  },
-                  "image_urls": {
-                    "type": "array",
-                    "items": {
-                      "type": "string",
-                      "format": "uri"
-                    },
-                    "minItems": 1,
-                    "maxItems": 3,
-                    "description": "List of URLs or local Base64 encoded images to edit."
                   },
                   "image_size": {
                     "anyOf": [
@@ -255,36 +255,56 @@
                     "default": "png",
                     "description": "The format of the generated image."
                   },
+                  "enable_prompt_expansion": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "If set to True, prompt will be upsampled with more details."
+                  },
+                  "num_images": {
+                    "type": "number",
+                    "minimum": 1,
+                    "maximum": 4,
+                    "default": 1,
+                    "description": "The number of images to generate."
+                  },
                   "seed": {
                     "type": "integer",
                     "minimum": 1,
                     "description": "The same seed and the same prompt given to the same version of the model will output the same image every time."
                   },
+                  "guidance_scale": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 20,
+                    "description": "The CFG (Classifier Free Guidance) scale is a measure of how close you want the model to stick to your prompt when looking for a related image to show you."
+                  },
+                  "num_inference_steps": {
+                    "type": "integer",
+                    "minimum": 4,
+                    "maximum": 50,
+                    "description": "The number of inference steps to perform."
+                  },
+                  "acceleration": {
+                    "type": "string",
+                    "enum": [
+                      "none",
+                      "regular",
+                      "high"
+                    ],
+                    "default": "regular",
+                    "description": "The speed of the generation. The higher the speed, the faster the generation."
+                  },
                   "enable_safety_checker": {
                     "type": "boolean",
                     "default": true,
                     "description": "If set to True, the safety checker will be enabled."
-                  },
-                  "safety_tolerance": {
-                    "type": "string",
-                    "enum": [
-                      "1",
-                      "2",
-                      "3",
-                      "4",
-                      "5",
-                      "6"
-                    ],
-                    "default": "2",
-                    "description": "The safety tolerance level for the generated image. 1 being the most strict and 5 being the most permissive."
                   }
                 },
                 "required": [
                   "model",
-                  "prompt",
-                  "image_urls"
+                  "prompt"
                 ],
-                "title": "blackforestlabs/flux-2-pro-edit"
+                "title": "blackforestlabs/flux-2"
               }
             }
           }
