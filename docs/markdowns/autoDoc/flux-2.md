@@ -21,9 +21,9 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-Flux 2 is an image generation model family from Black Forest Labs (Flux), available via fal ai. It supports text-to-image, image-to-image, and LoRA-based customization workflows, covering both standard and “pro” variants as well as dedicated editing endpoints.
+Flux 2 is an image generation model from Black Forest Labs, available via fal.ai, designed for high-quality text-to-image, image-to-image, and image editing workflows. It supports both text and visual modalities and includes specialized variants for LoRA-based customization and professional-grade rendering.
 
-The model is optimized for producing detailed, high-quality illustrations, promotional visuals, and artistic scenes. It operates in the vision modality and is designed for robust creative image synthesis and editing across a range of professional and artistic use cases.
+The model family targets use cases such as detailed illustrations, promotional imagery, and artistic scenes, with multiple variants (`base`, `edit`, `lora`, `pro`) optimized for different generation and editing scenarios.
 
 ## How to Make a Call
 
@@ -113,7 +113,7 @@ const data = await response.json();
 {% code overflow="wrap" %}
 
 ```json5
-{'id': 'img-1744193377-PR9oTu6vDabN9nj0VUUX', 'object': 'image', 'created': 1744193377, 'model': 'blackforestlabs/flux-2', 'data': [{'url': 'https://api.aimlapi.com/v1/images/generated/flux-2/example-image.png', 'b64_json': null}]}
+{'id': 'img-1744193377-AbCdEfGhIjKlMnOpQrSt', 'object': 'image', 'created': 1744193377, 'model': 'blackforestlabs/flux-2', 'data': [{'url': 'https://cdn.aimlapi.com/images/blackforestlabs/flux-2/sample-image.png', 'b64_json': null}],'usage': {'prompt_tokens': 0, 'completion_tokens': 0, 'total_tokens': 0}}
 ```
 
 {% endcode %}
