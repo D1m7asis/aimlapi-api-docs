@@ -17,9 +17,9 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-Kling 2.6 Pro image-to-video is a video generation model from KlingAI, served via fal.ai, designed to create cinematic clips with smooth, realistic motion and high visual detail. It supports both vision and audio modalities, enabling native audio generation alongside the visual content.
+Kling 2.6 Pro is a next-generation cinematic video generation model from KlingAI, available via fal.ai. It is designed to produce smooth, realistic motion and highly detailed visuals, with native audio generation capabilities.
 
-The model is suited for image-to-video animation and text-to-video synthesis workflows, making it useful for producing promos, advertisements, social media clips, and rapid video mockups. It targets scenarios where creative, high-fidelity video output is required from either a static image or a textual description.
+The model supports both image-to-video animation and text-to-video creation, making it suitable for producing promotional content, advertisements, social media clips, and rapid video mockups. It operates over vision and audio modalities, enabling end-to-end generation of rich, narrative video sequences from static images or text prompts.
 
 ## How to Make a Call
 
@@ -122,7 +122,27 @@ main()
 {% code overflow="wrap" %}
 
 ```json5
-{'id': 'gen-1744193377-EXAMPLEID123456789', 'object': 'video.generation', 'created': 1744193377, 'model': 'klingai/video-v2-6-pro-image-to-video', 'status': 'succeeded', 'output': {'video_url': 'https://cdn.aimlapi.com/video/gen-1744193377-EXAMPLEID123456789.mp4', 'thumbnail_url': 'https://cdn.aimlapi.com/video/gen-1744193377-EXAMPLEID123456789.jpg', 'duration_seconds': 5, 'has_audio': true}, 'meta': {'prompt': 'A jellyfish in the ocean', 'image_url': 'https://upload.wikimedia.org/wikipedia/commons/3/35/Maldivesfish2.jpg'}}
+{
+  "id": "gen-1234567890",
+  "object": "video.generation",
+  "model": "klingai/video-v2-6-pro-image-to-video",
+  "created": 1733846400,
+  "status": "succeeded",
+  "prompt": "A jellyfish in the ocean",
+  "data": [
+    {
+      "url": "https://cdn.aimlapi.com/videos/gen-1234567890/output.mp4",
+      "duration_seconds": 5,
+      "resolution": "1080x1920",
+      "has_audio": true
+    }
+  ],
+  "meta": {
+    "input": {
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/35/Maldivesfish2.jpg"
+    }
+  }
+}
 ```
 
 {% endcode %}
