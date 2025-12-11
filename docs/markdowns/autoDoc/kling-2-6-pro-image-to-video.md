@@ -19,9 +19,9 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-Kling 2.6 Pro is a next-generation cinematic video generation model from KlingAI, provided via fal.ai. It produces smooth, realistic motion and detailed visuals, and can natively generate audio alongside video output.
+Kling 2.6 Pro image-to-video is a next-generation cinematic video generation model from KlingAI, served via fal.ai. It produces short, high-fidelity video clips with smooth, realistic motion, detailed visuals, and native audio, targeting professional-grade creative workflows.
 
-The model supports both image-to-video animation and text-to-video generation, making it suitable for promotional content, advertisements, social media clips, and rapid video prototyping. It is optimized for vision and audio modalities and is designed for high-quality creative and commercial video production workflows.
+The model supports both image-to-video and text-to-video tasks, making it suitable for generating promos, advertisements, social media content, and rapid video mockups from either reference images or text prompts.
 
 ## How to Make a Call
 
@@ -124,7 +124,29 @@ main()
 {% code overflow="wrap" %}
 
 ```json5
-{'id': 'gen-1744193377-VideoKling2p6Pro-abc123', 'object': 'video.generation', 'model': 'klingai/video-v2-6-pro-image-to-video', 'created': 1744193377, 'status': 'processing', 'output': {'video_url': null, 'thumbnail_url': null, 'duration_seconds': 5}, 'meta': {'prompt': 'A jellyfish in the ocean', 'mode': 'image-to-video'}, 'usage': {'input_tokens': 0, 'output_tokens': 0, 'prompt_tokens': 0, 'completion_tokens': 0, 'total_tokens': 0}}
+{
+  "id": "gen_video_01JH2M9KQ3X4ABCD1234",
+  "object": "video.generation",
+  "model": "klingai/video-v2-6-pro-image-to-video",
+  "created": 1744193377,
+  "status": "succeeded",
+  "input": {
+    "prompt": "A jellyfish in the ocean",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/35/Maldivesfish2.jpg",
+    "duration": 5
+  },
+  "output": {
+    "video_url": "https://cdn.aimlapi.com/videos/gen_video_01JH2M9KQ3X4ABCD1234.mp4",
+    "thumbnail_url": "https://cdn.aimlapi.com/videos/gen_video_01JH2M9KQ3X4ABCD1234_thumb.jpg",
+    "has_audio": true,
+    "resolution": "1080x1080",
+    "fps": 24
+  },
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0
+  }
+}
 ```
 
 {% endcode %}
