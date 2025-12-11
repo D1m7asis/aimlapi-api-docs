@@ -3,7 +3,7 @@
   "info": {
     "title": "Seedream 4.5 - AI/ML API",
     "version": "1.0.0",
-    "description": "Seedream 4.5 is ByteDance's latest internal image generation model focused on high-quality text-to-image and image-to-image tasks. It improves editing consistency, portrait quality, small text rendering, multi-image fusion, and logical scene understanding for commercial use cases like e-commerce, advertising, film, gaming, and architectural visualization."
+    "description": "Seedream 4.5 is ByteDance's latest high-end image generation model, offering improved editing consistency, portrait quality, small-text rendering, and multi-image fusion. It targets commercial use cases like e-commerce, advertising, film, gaming, and architectural visualization, supporting complex multimodal scenarios and precise instruction following."
   },
   "servers": [
     {
