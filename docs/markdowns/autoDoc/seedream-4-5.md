@@ -19,9 +19,9 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-Seedream 4.5 is a high-end image generation model from the Seedream Team at ByteDance, exposed via the ByteDance / BytePlus ecosystem. It supports both vision and text modalities, enabling text-to-image, image-to-image, image editing, and multi-image instruction workflows.
+Seedream 4.5 is ByteDance’s latest image generation model, developed by the Seedream Team and served via ByteDance / BytePlus. It supports both vision and text modalities, with a focus on high-quality text-to-image and image-to-image synthesis as well as image editing and multi-image instruction.
 
-The model focuses on improved editing consistency, high-quality portraits, small-text rendering, and robust scene-level understanding. It is designed for demanding commercial scenarios such as e‑commerce, advertising, film, gaming, architecture, and creative design pipelines.
+The model emphasizes improved editing consistency, portrait and face quality, fine-grained text rendering, multi-image fusion, and robust logical scene understanding. It is designed for commercial visual content workflows such as e-commerce product imagery, advertising creatives, film and game concept art, and architectural visualization.
 
 ## How to Make a Call
 
@@ -60,9 +60,11 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="seedream-4-5" path="/v1/images/generations" method="post" %}
+[OpenAPI seedream-4-5](https://raw.githubusercontent.com/aimlapi/api-docs/main/docs/api-references/image-models/ByteDance/seedream-4-5.json)
 {% endopenapi-operation %}
 
 {% openapi-operation spec="seedream-4-5" path="/images/generations" method="post" %}
+[OpenAPI seedream-4-5](https://raw.githubusercontent.com/aimlapi/api-docs/main/docs/api-references/image-models/ByteDance/seedream-4-5.json)
 {% endopenapi-operation %}
 
 ## Code Example
@@ -111,7 +113,7 @@ const data = await response.json();
 {% code overflow="wrap" %}
 
 ```json5
-{'id': 'img-1733912345-AbCdEfGhIj', 'object': 'image', 'created': 1733912345, 'model': 'bytedance/seedream-4-5', 'data': [{'url': 'https://cdn.aimlapi.com/generated/bytedance/seedream-4-5/sample-mount-fuji.png', 'b64_json': null, 'revised_prompt': 'Mount Fuji with cherry blossoms in the foreground on a clear spring day, realistic landscape, soft natural light.'}], 'usage': {'prompt_tokens': 65, 'total_tokens': 65}}
+{'created': 1733905732, 'data': [{'b64_json': None, 'url': 'https://image.pollinations.ai/prompt/Mount%20Fuji%20with%20cherry%20blossoms%20in%20the%20foreground,%20clear%20sky,%20peaceful%20spring%20day,%20soft%20natural%20light,%20realistic%20landscape.'}], 'model': 'bytedance/seedream-4-5', 'object': 'image.completion', 'usage': {'completion_tokens': 300, 'prompt_tokens': 42, 'total_tokens': 342}}
 ```
 
 {% endcode %}
