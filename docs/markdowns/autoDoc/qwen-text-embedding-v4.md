@@ -8,7 +8,6 @@
 This documentation is valid for the following list of our models:
 
 * `alibaba/qwen-text-embedding-v4`
-* `alibaba/qwen-text-embedding-v3`
   {% endhint %}
   {% endcolumn %}
 
@@ -19,9 +18,9 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-Qwen Text Embedding v4 is a text embedding model from Qwen / Alibaba, available through Alibaba Cloud Model Studio. It is designed to generate dense vector representations for text in over 100 languages, with configurable embedding dimensions ranging from 64 to 2048 to accommodate different latency and quality requirements.
+Qwen Text Embedding v4 is a next-generation universal text embedding model developed by Qwen / Alibaba and served via Alibaba Cloud Model Studio. It supports over 100 languages and produces dense vector representations of text suitable for a wide range of retrieval and semantic understanding applications.
 
-The previous v3 model in this family supports over 50 languages with embedding sizes up to 1024 dimensions. Both versions target embedding use cases such as semantic search, clustering, recommendation, and retrieval-augmented applications where multilingual coverage and flexible vector sizes are important.
+The model is optimized for embedding tasks such as search, retrieval, and semantic similarity, and supports configurable embedding dimensions from 64 up to 2048. This flexibility allows developers to balance representation quality, latency, and storage requirements based on their specific use cases.
 
 ## How to Make a Call
 
@@ -104,7 +103,7 @@ const data = await response.json();
 {% code overflow="wrap" %}
 
 ```json5
-{'id': 'emb-1744193377-PR9oTu6vDabN9nj0VUUX', 'object': 'list', 'model': 'alibaba/qwen-text-embedding-v4', 'data': [{'object': 'embedding', 'index': 0, 'embedding': [0.0123, -0.0481, 0.0927, 0.0034, -0.0176]}], 'usage': {'prompt_tokens': 9, 'total_tokens': 9}}
+{'id': 'embd-1733936400-ExampleId123', 'object': 'list', 'model': 'alibaba/qwen-text-embedding-v4', 'data': [{'object': 'embedding', 'index': 0, 'embedding': [0.0123, -0.0456, 0.0789, 0.0012]}], 'usage': {'prompt_tokens': 9, 'total_tokens': 9}}
 ```
 
 {% endcode %}
