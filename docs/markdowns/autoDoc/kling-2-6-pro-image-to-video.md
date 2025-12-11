@@ -1,24 +1,28 @@
 # Kling 2.6 Pro image-to-video
 
+# Kling 2.6 Pro image-to-video
+
 {% columns %}
 {% column width="66.66666666666666%" %}
 {% hint style="info" %}
 This documentation is valid for the following list of our models:
 
 * `klingai/video-v2-6-pro-image-to-video`
+* `klingai/video-v2-6-pro-text-to-video`
   {% endhint %}
   {% endcolumn %}
 
 {% column width="33.33333333333334%" %}
-
+<a href="https://aimlapi.com/app/?model=klingai/video-v2-6-pro-image-to-video" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 
 ## Model Overview
 
-Kling 2.6 Pro image-to-video is a next-generation cinematic video generation model from KlingAI, served via fal.ai. It focuses on producing smooth, realistic motion and detailed visuals, with native audio generation capabilities for richer outputs.
+Kling 2.6 Pro is a next-generation cinematic video generation model from KlingAI, provided via fal.ai. It produces smooth, realistic motion and detailed visuals, and can natively generate audio alongside video output.
 
-The model supports vision and audio modalities and is optimized for both image-to-video animation and text-to-video synthesis. It is well suited for generating short promo clips, advertisements, social media content, and rapid video mockups in production workflows.
+The model supports both image-to-video animation and text-to-video generation, making it suitable for promotional content, advertisements, social media clips, and rapid video prototyping. It is optimized for vision and audio modalities and is designed for high-quality creative and commercial video production workflows.
+
 ## How to Make a Call
 
 <details>
@@ -48,15 +52,21 @@ Only `model` and `messages` are required parameters for this model (and they are
 Run your modified code inside your development environment. Response time depends on many factors, but for simple prompts it rarely exceeds a few seconds.
 
 {% hint style="success" %}
-If you need a more detailed walkthrough for setting up your development environment and making a request step-by-step, feel free to use our **Quickstart guide**:  
-https://docs.aimlapi.com/quickstart/setting-up
+If you need a more detailed walkthrough for setting up your development environment and making a request step-by-step, feel free to use our **[Quickstart guide.](https://docs.aimlapi.com/quickstart/setting-up)**
 {% endhint %}
 
 </details>
 
-# API Schema
-> Здесь вставить схему OpenAPI
+## API Schema
 
+{% openapi-operation spec="kling-2-6-pro-image-to-video" path="/v2/video/generations" method="post" %}
+{% endopenapi-operation %}
+
+{% openapi-operation spec="kling-2-6-pro-image-to-video" path="/v1/video/generations" method="post" %}
+{% endopenapi-operation %}
+
+{% openapi-operation spec="kling-2-6-pro-image-to-video" path="/video/generations" method="post" %}
+{% endopenapi-operation %}
 
 ## Code Example
 
@@ -114,9 +124,11 @@ main()
 {% code overflow="wrap" %}
 
 ```json5
-{'id': 'gen-1744193377-vid-abc123xyz', 'object': 'video.generation', 'status': 'succeeded', 'created': 1744193377, 'model': 'klingai/video-v2-6-pro-image-to-video', 'input': {'prompt': 'A jellyfish in the ocean', 'image_url': 'https://upload.wikimedia.org/wikipedia/commons/3/35/Maldivesfish2.jpg'}, 'output': {'video_url': 'https://cdn.aimlapi.com/video/gen-1744193377-vid-abc123xyz.mp4', 'thumbnail_url': 'https://cdn.aimlapi.com/video/gen-1744193377-vid-abc123xyz-thumbnail.png', 'duration_seconds': 5, 'has_audio': true}, 'usage': {'input_tokens': 0, 'output_tokens': 0}}
+{'id': 'gen-1744193377-VideoKling2p6Pro-abc123', 'object': 'video.generation', 'model': 'klingai/video-v2-6-pro-image-to-video', 'created': 1744193377, 'status': 'processing', 'output': {'video_url': null, 'thumbnail_url': null, 'duration_seconds': 5}, 'meta': {'prompt': 'A jellyfish in the ocean', 'mode': 'image-to-video'}, 'usage': {'input_tokens': 0, 'output_tokens': 0, 'prompt_tokens': 0, 'completion_tokens': 0, 'total_tokens': 0}}
 ```
 
 {% endcode %}
 
-</details>Generated from AD-240
+</details>
+
+<!-- Generated from AA-232 -->
