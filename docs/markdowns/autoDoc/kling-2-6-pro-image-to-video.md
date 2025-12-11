@@ -1,7 +1,5 @@
 # Kling 2.6 Pro image-to-video
 
-# Kling 2.6 Pro image-to-video
-
 {% columns %}
 {% column width="66.66666666666666%" %}
 {% hint style="info" %}
@@ -19,9 +17,9 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-Kling 2.6 Pro is a next-generation cinematic video generation model from KlingAI, available via fal.ai, designed to produce smooth, realistic motion with high visual detail and native audio synthesis. It is a multimodal video model that operates over vision, audio, and text inputs.
+Kling 2.6 Pro is a next-generation cinematic video generation model from KlingAI, available via fal.ai. It produces smooth, realistic motion with detailed visuals and supports native audio output, making it suitable for high-quality, visually rich content.
 
-The model supports both image-to-video animation and text-to-video generation, making it suitable for creating promo clips, advertisements, social media content, and rapid video mockups. It is optimized for realistic, production-quality outputs where coherent motion and audiovisual consistency are important.
+The model supports both image-to-video animation and text-to-video generation, covering use cases such as promotional clips, ad creatives, social media content, and rapid video mockups. It is designed for developers building media workflows that require controllable, high-fidelity video synthesis from either visual or textual inputs.
 
 ## How to Make a Call
 
@@ -124,7 +122,7 @@ main()
 {% code overflow="wrap" %}
 
 ```json5
-{'id': 'gen-1744540000-EXAMPLE123456789', 'object': 'video.generation', 'model': 'klingai/video-v2-6-pro-image-to-video', 'created': 1744540000, 'status': 'succeeded', 'output': {'video_url': 'https://cdn.aimlapi.com/generated/klingai/video-v2-6-pro-image-to-video/example.mp4', 'thumbnail_url': 'https://cdn.aimlapi.com/generated/klingai/video-v2-6-pro-image-to-video/example.jpg', 'duration_seconds': 8}, 'meta': {'prompt': 'A jellyfish in the ocean', 'image_url': 'https://upload.wikimedia.org/wikipedia/commons/3/35/Maldivesfish2.jpg'}}
+{'id': 'gen-1744193377-PR9oTu6vDabN9nj0VUUX', 'object': 'video.generation', 'status': 'succeeded', 'created': 1744193377, 'model': 'klingai/video-v2-6-pro-image-to-video', 'result': {'video_url': 'https://cdn.aimlapi.com/video/gen-1744193377-PR9oTu6vDabN9nj0VUUX.mp4', 'thumbnail_url': 'https://cdn.aimlapi.com/video/gen-1744193377-PR9oTu6vDabN9nj0VUUX.jpg', 'duration_seconds': 5, 'has_audio': false}, 'meta': {'prompt': 'A jellyfish in the ocean', 'seed': 123456}, 'usage': {'input_tokens': 0, 'output_tokens': 0, 'total_tokens': 0}}
 ```
 
 {% endcode %}
