@@ -3,7 +3,7 @@
   "info": {
     "title": "Qwen Text Embedding v4 - AI/ML API",
     "version": "1.0.0",
-    "description": "Qwen Text Embedding v4 is a next-generation multilingual text embedding model supporting over 100 languages and configurable embedding dimensions from 64 to 2048. The previous v3 model supports over 50 languages with embedding sizes up to 1024."
+    "description": "Qwen Text Embedding v4 is a next-generation universal embedding model that supports over 100 languages and configurable embedding dimensions from 64 to 2048. It is designed for high-quality text representations for search, retrieval, and semantic similarity tasks."
   },
   "servers": [
     {
