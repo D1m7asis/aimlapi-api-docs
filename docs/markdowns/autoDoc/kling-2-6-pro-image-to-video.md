@@ -18,9 +18,9 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-Kling 2.6 Pro image-to-video is a video generation model from KlingAI, served via fal.ai, designed to animate static images into short, cinematic video clips. It produces smooth, realistic motion with detailed visuals and can generate native audio alongside the video output.
+Kling 2.6 Pro image-to-video is a video generation model from KlingAI, provided via fal.ai, designed to animate static images into short, cinema-style clips. It produces smooth camera motion, coherent scene dynamics, and detailed visuals, with support for native audio when needed.
 
-The model is optimized for image-to-video and general video generation tasks, making it well-suited for promotional content, advertisements, social media assets, and rapid video mockups where high visual fidelity and natural motion are important.
+The model is optimized for image-to-video tasks such as product shots, portraits, scenes, promotional content, advertisements, social media clips, and rapid video mockups. It focuses on high visual fidelity and realistic motion, making it suitable for creative and production workflows that require fast iteration on video concepts.
 
 ## How to Make a Call
 
@@ -123,7 +123,24 @@ main()
 {% code overflow="wrap" %}
 
 ```json5
-{'id': 'gen-1744193377-PR9oTu6vDabN9nj0VUUX', 'object': 'video.generation', 'status': 'succeeded', 'created': 1744193377, 'model': 'klingai/video-v2-6-pro-image-to-video', 'output': {'video_url': 'https://cdn.aimlapi.com/video/gen-1744193377-PR9oTu6vDabN9nj0VUUX.mp4', 'thumbnail_url': 'https://cdn.aimlapi.com/video/gen-1744193377-PR9oTu6vDabN9nj0VUUX_thumbnail.jpg', 'duration_seconds': 6, 'resolution': {'width': 1280, 'height': 720}}, 'usage': {'input_tokens': 0, 'output_tokens': 0, 'prompt_tokens': 0, 'completion_tokens': 0, 'total_tokens': 0}}
+{
+  "id": "cm6z11yhd0000t1nw7xwgj2g0",
+  "object": "video.generation",
+  "created": 1744193377,
+  "model": "klingai/video-v2-6-pro-image-to-video",
+  "status": "succeeded",
+  "output": {
+    "video_url": "https://cdn.aimlapi.com/videos/cm6z11yhd0000t1nw7xwgj2g0.mp4",
+    "thumbnail_url": "https://cdn.aimlapi.com/videos/cm6z11yhd0000t1nw7xwgj2g0_thumbnail.jpg",
+    "duration_seconds": 6.0,
+    "has_audio": true
+  },
+  "meta": {
+    "prompt": "A jellyfish in the ocean",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/35/Maldivesfish2.jpg",
+    "resolution": "1080x1920"
+  }
+}
 ```
 
 {% endcode %}
