@@ -19,9 +19,9 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-Kling 2.6 Pro is a next-generation cinematic video generation model from KlingAI, served via fal.ai. It is designed to produce smooth, realistic motion and highly detailed visuals, with native audio generation to create coherent audiovisual clips.
+Kling 2.6 Pro is a next-generation cinematic video generation model from KlingAI, available via fal.ai, designed to produce smooth, realistic motion with high visual detail and native audio synthesis. It is a multimodal video model that operates over vision, audio, and text inputs.
 
-The model supports both image-to-video animation and text-to-video generation, making it suitable for promos, advertisements, social media content, and rapid video mockups. It operates over visual and audio modalities and is optimized for creative video synthesis workflows.
+The model supports both image-to-video animation and text-to-video generation, making it suitable for creating promo clips, advertisements, social media content, and rapid video mockups. It is optimized for realistic, production-quality outputs where coherent motion and audiovisual consistency are important.
 
 ## How to Make a Call
 
@@ -124,7 +124,7 @@ main()
 {% code overflow="wrap" %}
 
 ```json5
-{'id': 'gen-video-1744193377-AbCdEfGhIjKl', 'object': 'video.generation', 'model': 'klingai/video-v2-6-pro-image-to-video', 'created': 1744193377, 'status': 'succeeded', 'output': {'video_url': 'https://cdn.aimlapi.com/video/gen-video-1744193377-AbCdEfGhIjKl.mp4', 'thumbnail_url': 'https://cdn.aimlapi.com/video/gen-video-1744193377-AbCdEfGhIjKl.jpg', 'duration_seconds': 5, 'has_audio': true}, 'usage': {'input_tokens': 0, 'output_tokens': 0, 'prompt_tokens': 0, 'completion_tokens': 0, 'total_tokens': 0}}
+{'id': 'gen-1744540000-EXAMPLE123456789', 'object': 'video.generation', 'model': 'klingai/video-v2-6-pro-image-to-video', 'created': 1744540000, 'status': 'succeeded', 'output': {'video_url': 'https://cdn.aimlapi.com/generated/klingai/video-v2-6-pro-image-to-video/example.mp4', 'thumbnail_url': 'https://cdn.aimlapi.com/generated/klingai/video-v2-6-pro-image-to-video/example.jpg', 'duration_seconds': 8}, 'meta': {'prompt': 'A jellyfish in the ocean', 'image_url': 'https://upload.wikimedia.org/wikipedia/commons/3/35/Maldivesfish2.jpg'}}
 ```
 
 {% endcode %}
