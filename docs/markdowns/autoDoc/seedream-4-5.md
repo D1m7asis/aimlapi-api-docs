@@ -1,5 +1,7 @@
 # Seedream 4.5
 
+# Seedream 4.5
+
 {% columns %}
 {% column width="66.66666666666666%" %}
 {% hint style="info" %}
@@ -20,6 +22,7 @@ This documentation is valid for the following list of our models:
 Seedream 4.5 is a high-end image generation model from the Seedream Team at ByteDance, exposed via the ByteDance / BytePlus ecosystem. It supports both vision and text modalities, enabling text-to-image, image-to-image, image editing, and multi-image instruction workflows.
 
 The model focuses on improved editing consistency, high-quality portraits, small-text rendering, and robust scene-level understanding. It is designed for demanding commercial scenarios such as e‑commerce, advertising, film, gaming, architecture, and creative design pipelines.
+
 ## How to Make a Call
 
 <details>
@@ -54,13 +57,14 @@ If you need a more detailed walkthrough for setting up your development environm
 
 </details>
 
+## API Schema
 
-{% openapi-operation spec="hailuo-02" path="/v2/generate/video/minimax/generation" method="post" %}
-[OpenAPI hailuo-02](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/MiniMax/hailuo-02.json)
+{% openapi-operation spec="seedream-4-5" path="/v1/images/generations" method="post" %}
 {% endopenapi-operation %}
 
+{% openapi-operation spec="seedream-4-5" path="/images/generations" method="post" %}
+{% endopenapi-operation %}
 
-"
 ## Code Example
 
 {% tabs %}{% tab title="Python" %}{% code overflow="wrap" %}
@@ -107,24 +111,11 @@ const data = await response.json();
 {% code overflow="wrap" %}
 
 ```json5
-{
-  "created": 1733934459,
-  "data": [
-    {
-      "b64_json": "iVBORw0KGgoAAAANSUhEUgAAAoAAAAHgCAIAAAAGVsnFAAAgAElEQ…",
-      "url": null,
-      "revised_prompt": "Mount Fuji with cherry blossoms in the foreground, clear sky, peaceful spring day, soft natural light, realistic landscape."
-    }
-  ],
-  "model": "bytedance/seedream-4-5",
-  "object": "image_generation",
-  "usage": {
-    "prompt_tokens": 64,
-    "total_tokens": 64
-  }
-}
+{'id': 'img-1733912345-AbCdEfGhIj', 'object': 'image', 'created': 1733912345, 'model': 'bytedance/seedream-4-5', 'data': [{'url': 'https://cdn.aimlapi.com/generated/bytedance/seedream-4-5/sample-mount-fuji.png', 'b64_json': null, 'revised_prompt': 'Mount Fuji with cherry blossoms in the foreground on a clear spring day, realistic landscape, soft natural light.'}], 'usage': {'prompt_tokens': 65, 'total_tokens': 65}}
 ```
 
 {% endcode %}
 
-</details>Generated from AA-224
+</details>
+
+<!-- Generated from AA-224 -->
