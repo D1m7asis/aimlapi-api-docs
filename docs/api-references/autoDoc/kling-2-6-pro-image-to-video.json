@@ -3,7 +3,7 @@
   "info": {
     "title": "Kling 2.6 Pro image-to-video - AI/ML API",
     "version": "1.0.0",
-    "description": "Kling 2.6 Pro is a next-generation cinematic video generation model that produces smooth, realistic motion, detailed visuals, and native audio. It supports both image-to-video animation and text-to-video generation for promos, ads, social clips, and rapid video mockups."
+    "description": "Kling 2.6 Pro is a next-generation cinematic video generator with smooth realistic motion, high visual detail, and native audio generation. It supports both image-to-video animation and text-to-video synthesis for promos, ads, social clips, and quick video mockups."
   },
   "servers": [
     {
