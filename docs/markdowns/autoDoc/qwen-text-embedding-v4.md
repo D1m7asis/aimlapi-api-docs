@@ -18,9 +18,9 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-Qwen Text Embedding v4 is a next-generation universal text embedding model developed by Qwen / Alibaba and served via Alibaba Cloud Model Studio. It supports over 100 languages and produces dense vector representations of text suitable for a wide range of retrieval and semantic understanding applications.
+Qwen Text Embedding v4 is a next-generation text embedding model from Qwen / Alibaba, available via Alibaba Cloud Model Studio. It supports over 100 languages and produces dense vector representations for text, optimized for multilingual semantic understanding.
 
-The model is optimized for embedding tasks such as search, retrieval, and semantic similarity, and supports configurable embedding dimensions from 64 up to 2048. This flexibility allows developers to balance representation quality, latency, and storage requirements based on their specific use cases.
+The model is designed for embedding tasks such as semantic search and representation learning, and supports configurable embedding dimensions from 64 up to 2048 to balance retrieval performance and storage or latency requirements.
 
 ## How to Make a Call
 
@@ -103,7 +103,7 @@ const data = await response.json();
 {% code overflow="wrap" %}
 
 ```json5
-{'id': 'embd-1733936400-ExampleId123', 'object': 'list', 'model': 'alibaba/qwen-text-embedding-v4', 'data': [{'object': 'embedding', 'index': 0, 'embedding': [0.0123, -0.0456, 0.0789, 0.0012]}], 'usage': {'prompt_tokens': 9, 'total_tokens': 9}}
+{'id': 'embd-1744193377-EXAMPLE123456', 'object': 'embedding', 'model': 'alibaba/qwen-text-embedding-v4', 'data': [{'object': 'embedding', 'index': 0, 'embedding': [0.0123, -0.0456, 0.0789, 0.0012]}], 'usage': {'prompt_tokens': 9, 'total_tokens': 9}}
 ```
 
 {% endcode %}
