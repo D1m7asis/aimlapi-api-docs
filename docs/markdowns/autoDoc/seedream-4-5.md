@@ -19,9 +19,9 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-Seedream 4.5 is ByteDance’s latest image generation model, developed by the Seedream Team and served via ByteDance / BytePlus. It supports both vision and text modalities, with a focus on high-quality text-to-image and image-to-image synthesis as well as image editing and multi-image instruction.
+Seedream 4.5 is ByteDance’s latest high-end image generation model developed by the Seedream Team. It is an image-focused model that supports both vision and text modalities, with capabilities for text-to-image generation, image-to-image transformation, image editing, and multi-image instruction-based composition.
 
-The model emphasizes improved editing consistency, portrait and face quality, fine-grained text rendering, multi-image fusion, and robust logical scene understanding. It is designed for commercial visual content workflows such as e-commerce product imagery, advertising creatives, film and game concept art, and architectural visualization.
+The model is designed for demanding commercial applications such as e-commerce, advertising, film, gaming, and architectural visualization. It emphasizes improved editing consistency, high-quality portrait rendering, small-text fidelity, multi-image fusion, and precise adherence to complex multimodal instructions.
 
 ## How to Make a Call
 
@@ -113,7 +113,7 @@ const data = await response.json();
 {% code overflow="wrap" %}
 
 ```json5
-{'created': 1733905732, 'data': [{'b64_json': None, 'url': 'https://image.pollinations.ai/prompt/Mount%20Fuji%20with%20cherry%20blossoms%20in%20the%20foreground,%20clear%20sky,%20peaceful%20spring%20day,%20soft%20natural%20light,%20realistic%20landscape.'}], 'model': 'bytedance/seedream-4-5', 'object': 'image.completion', 'usage': {'completion_tokens': 300, 'prompt_tokens': 42, 'total_tokens': 342}}
+{'created': 1744214400, 'data': [{'b64_json': '<BASE64_IMAGE_DATA>', 'url': null}], 'model': 'bytedance/seedream-4-5', 'object': 'image.generated', 'usage': {'prompt_tokens': 0, 'total_tokens': 0}}
 ```
 
 {% endcode %}
