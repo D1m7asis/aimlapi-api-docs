@@ -11,15 +11,15 @@ This documentation is valid for the following list of our models:
   {% endcolumn %}
 
 {% column width="33.33333333333334%" %}
-
+<a href="https://aimlapi.com/app/?model=seedream-4-5-251128" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 
 ## Model Overview
 
-Seedream 4.5 is an image generation model developed by the Seedream Team at ByteDance and provided via ByteDance / BytePlus. It focuses on high-quality visual generation and editing, with improved consistency for edits, enhanced portrait rendering, fine-grained text rendering within images, and stronger multi-image fusion that better captures logical relationships and visual aesthetics.
+Seedream 4.5 is a high-end image generation model from the Seedream Team at ByteDance, exposed via the ByteDance / BytePlus ecosystem. It supports both vision and text modalities, enabling text-to-image, image-to-image, image editing, and multi-image instruction workflows.
 
-The model supports vision and text modalities and is optimized for text-to-image, image-to-image, image editing, and multi-image instruction workflows. It is designed for demanding commercial and creative use cases such as e-commerce, advertising, film, gaming, architecture, interior design, and poster creation, where precise instruction following and complex multimodal scenarios are required.
+The model focuses on improved editing consistency, high-quality portraits, small-text rendering, and robust scene-level understanding. It is designed for demanding commercial scenarios such as e‑commerce, advertising, film, gaming, architecture, and creative design pipelines.
 ## How to Make a Call
 
 <details>
@@ -54,10 +54,13 @@ If you need a more detailed walkthrough for setting up your development environm
 
 </details>
 
-# API Schema
-> Здесь вставить схему OpenAPI
+
+{% openapi-operation spec="hailuo-02" path="/v2/generate/video/minimax/generation" method="post" %}
+[OpenAPI hailuo-02](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/MiniMax/hailuo-02.json)
+{% endopenapi-operation %}
 
 
+"
 ## Code Example
 
 {% tabs %}{% tab title="Python" %}{% code overflow="wrap" %}
@@ -104,7 +107,22 @@ const data = await response.json();
 {% code overflow="wrap" %}
 
 ```json5
-{'created': 1733836800, 'data': [{'b64_json': '<BASE64_IMAGE_DATA>', 'url': null}], 'model': 'bytedance/seedream-4-5', 'object': 'image'}`
+{
+  "created": 1733934459,
+  "data": [
+    {
+      "b64_json": "iVBORw0KGgoAAAANSUhEUgAAAoAAAAHgCAIAAAAGVsnFAAAgAElEQ…",
+      "url": null,
+      "revised_prompt": "Mount Fuji with cherry blossoms in the foreground, clear sky, peaceful spring day, soft natural light, realistic landscape."
+    }
+  ],
+  "model": "bytedance/seedream-4-5",
+  "object": "image_generation",
+  "usage": {
+    "prompt_tokens": 64,
+    "total_tokens": 64
+  }
+}
 ```
 
 {% endcode %}
