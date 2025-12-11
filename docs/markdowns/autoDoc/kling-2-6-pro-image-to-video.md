@@ -7,8 +7,8 @@ This documentation is valid for the following list of our models:
 
 * `klingai/video-v2-6-pro-image-to-video`
 * `klingai/video-v2-6-pro-text-to-video`
-{% endhint %}
-{% endcolumn %}
+  {% endhint %}
+  {% endcolumn %}
 
 {% column width="33.33333333333334%" %}
 <a href="https://aimlapi.com/app/?model=klingai/video-v2-6-pro-image-to-video" class="button primary">Try in Playground</a>
@@ -17,9 +17,9 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-Kling 2.6 Pro is a next-generation cinematic video generation model from KlingAI, served via fal.ai. It is designed to produce smooth, realistic motion and detailed visuals with native audio support, targeting high-quality creative outputs.
+Kling 2.6 Pro is a next-generation cinematic video generation model from KlingAI, provided via fal.ai. It focuses on high-quality motion synthesis with smooth, realistic dynamics, detailed visuals, and native audio support, targeting professional-grade video creation workflows.
 
-The model supports both image-to-video animation of static images and text-to-video generation, making it suitable for marketing creatives, social media clips, and rapid video mockups. It operates over vision and audio modalities, enabling end-to-end generation of short cinematic video sequences from either visual or textual inputs.
+The model supports both image-to-video and text-to-video tasks, making it suitable for producing promos, advertisements, social media clips, and rapid video mockups. It operates over vision and audio modalities, enabling end-to-end generation of short video content from either static images or textual descriptions.
 
 ## How to Make a Call
 
@@ -122,7 +122,7 @@ main()
 {% code overflow="wrap" %}
 
 ```json5
-{'id': 'gen-1744193377-XYZkling2-6img2vid', 'object': 'video.generation', 'model': 'klingai/video-v2-6-pro-image-to-video', 'created': 1744193377, 'status': 'queued', 'input': {'prompt': 'A jellyfish in the ocean', 'image_url': 'https://upload.wikimedia.org/wikipedia/commons/3/35/Maldivesfish2.jpg', 'duration_seconds': 5}, 'output': {'video_url': null, 'thumbnail_url': null}, 'usage': {'credits': 1}}
+{'id': 'gen-1733932800-abc123xyz', 'object': 'video.generation', 'model': 'klingai/video-v2-6-pro-image-to-video', 'created': 1733932800, 'status': 'succeeded', 'output': {'video_url': 'https://cdn.aimlapi.com/video/gen-1733932800-abc123xyz.mp4', 'thumbnail_url': 'https://cdn.aimlapi.com/video/gen-1733932800-abc123xyz.jpg', 'duration_seconds': 6}, 'input': {'prompt': 'A jellyfish in the ocean', 'image_url': 'https://upload.wikimedia.org/wikipedia/commons/3/35/Maldivesfish2.jpg'}, 'usage': {'input_tokens': 0, 'output_tokens': 0, 'total_tokens': 0}}
 ```
 
 {% endcode %}
