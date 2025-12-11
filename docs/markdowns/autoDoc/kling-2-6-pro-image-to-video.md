@@ -8,6 +8,7 @@
 This documentation is valid for the following list of our models:
 
 * `klingai/video-v2-6-pro-image-to-video`
+* `klingai/video-v2-6-pro-text-to-video`
   {% endhint %}
   {% endcolumn %}
 
@@ -18,9 +19,9 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-Kling 2.6 Pro image-to-video is a video generation model from KlingAI, provided via fal.ai, designed to animate static images into short, cinema-style clips. It produces smooth camera motion, coherent scene dynamics, and detailed visuals, with support for native audio when needed.
+Kling 2.6 Pro is a next-generation cinematic video generation model from KlingAI, served via fal.ai. It is designed to produce smooth, realistic motion and highly detailed visuals, with native audio generation to create coherent audiovisual clips.
 
-The model is optimized for image-to-video tasks such as product shots, portraits, scenes, promotional content, advertisements, social media clips, and rapid video mockups. It focuses on high visual fidelity and realistic motion, making it suitable for creative and production workflows that require fast iteration on video concepts.
+The model supports both image-to-video animation and text-to-video generation, making it suitable for promos, advertisements, social media content, and rapid video mockups. It operates over visual and audio modalities and is optimized for creative video synthesis workflows.
 
 ## How to Make a Call
 
@@ -123,24 +124,7 @@ main()
 {% code overflow="wrap" %}
 
 ```json5
-{
-  "id": "cm6z11yhd0000t1nw7xwgj2g0",
-  "object": "video.generation",
-  "created": 1744193377,
-  "model": "klingai/video-v2-6-pro-image-to-video",
-  "status": "succeeded",
-  "output": {
-    "video_url": "https://cdn.aimlapi.com/videos/cm6z11yhd0000t1nw7xwgj2g0.mp4",
-    "thumbnail_url": "https://cdn.aimlapi.com/videos/cm6z11yhd0000t1nw7xwgj2g0_thumbnail.jpg",
-    "duration_seconds": 6.0,
-    "has_audio": true
-  },
-  "meta": {
-    "prompt": "A jellyfish in the ocean",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/35/Maldivesfish2.jpg",
-    "resolution": "1080x1920"
-  }
-}
+{'id': 'gen-video-1744193377-AbCdEfGhIjKl', 'object': 'video.generation', 'model': 'klingai/video-v2-6-pro-image-to-video', 'created': 1744193377, 'status': 'succeeded', 'output': {'video_url': 'https://cdn.aimlapi.com/video/gen-video-1744193377-AbCdEfGhIjKl.mp4', 'thumbnail_url': 'https://cdn.aimlapi.com/video/gen-video-1744193377-AbCdEfGhIjKl.jpg', 'duration_seconds': 5, 'has_audio': true}, 'usage': {'input_tokens': 0, 'output_tokens': 0, 'prompt_tokens': 0, 'completion_tokens': 0, 'total_tokens': 0}}
 ```
 
 {% endcode %}
