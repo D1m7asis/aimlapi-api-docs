@@ -17,9 +17,9 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-Kling 2.6 Pro is a next-generation cinematic video generation model from KlingAI, available via fal.ai. It is designed to produce smooth, realistic motion and highly detailed visuals, with native audio generation capabilities.
+Kling 2.6 Pro is a cinematic video generation model from KlingAI, served via fal.ai, designed to create smooth, realistic motion with detailed visuals and native audio. It operates as a video model across vision, audio, and text modalities, enabling high-fidelity content production suitable for professional and creative workflows.
 
-The model supports both image-to-video animation and text-to-video creation, making it suitable for producing promotional content, advertisements, social media clips, and rapid video mockups. It operates over vision and audio modalities, enabling end-to-end generation of rich, narrative video sequences from static images or text prompts.
+The model supports both image-to-video animation of static images and text-to-video generation, with optional sound. Typical use cases include rapid creation of ad creatives, promotional clips, and social media video mockups where natural motion and coherent audiovisual output are required.
 
 ## How to Make a Call
 
@@ -123,24 +123,24 @@ main()
 
 ```json5
 {
-  "id": "gen-1234567890",
+  "id": "video-gen-1739274923-abc123xyz",
   "object": "video.generation",
   "model": "klingai/video-v2-6-pro-image-to-video",
-  "created": 1733846400,
+  "created": 1739274923,
   "status": "succeeded",
-  "prompt": "A jellyfish in the ocean",
-  "data": [
-    {
-      "url": "https://cdn.aimlapi.com/videos/gen-1234567890/output.mp4",
-      "duration_seconds": 5,
-      "resolution": "1080x1920",
-      "has_audio": true
-    }
-  ],
+  "output": {
+    "video_url": "https://cdn.aimlapi.com/video-generations/video-gen-1739274923-abc123xyz.mp4",
+    "thumbnail_url": "https://cdn.aimlapi.com/video-generations/video-gen-1739274923-abc123xyz.jpg",
+    "duration": 5.2,
+    "resolution": "1280x720"
+  },
+  "input": {
+    "prompt": "A jellyfish in the ocean",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/35/Maldivesfish2.jpg"
+  },
   "meta": {
-    "input": {
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/35/Maldivesfish2.jpg"
-    }
+    "provider": "fal.ai",
+    "model_name": "Kling 2.6 Pro image-to-video"
   }
 }
 ```
