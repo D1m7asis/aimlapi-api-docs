@@ -1,0 +1,13 @@
+{
+  "error": "Invalid URL: \n. URL must start with \"http\" or \"https\".",
+  "info": {
+    "title": "Qwen Text Embedding v4 - AI/ML API",
+    "version": "1.0.0",
+    "description": "Qwen Text Embedding v4 is a next-generation universal embedding model from Alibaba with support for over 100 languages and configurable embedding dimensions from 64 to 2048, suitable for a wide range of semantic tasks."
+  },
+  "servers": [
+    {
+      "url": "https://api.aimlapi.com"
+    }
+  ]
+}
