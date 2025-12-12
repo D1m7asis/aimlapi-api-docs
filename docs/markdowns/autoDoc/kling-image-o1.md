@@ -58,6 +58,16 @@ If you need a more detailed walkthrough for setting up your development environm
 
 </details>
 
+## API Schema
+
+{% openapi-operation spec="o1" path="/v1/chat/completions" method="post" %}
+[OpenAPI o1](https://raw.githubusercontent.com/aimlapi/api-docs/main/docs/api-references/text-models-llm/OpenAI/o1.json)
+{% endopenapi-operation %}
+
+{% openapi-operation spec="o1" path="/chat/completions" method="post" %}
+[OpenAPI o1](https://raw.githubusercontent.com/aimlapi/api-docs/main/docs/api-references/text-models-llm/OpenAI/o1.json)
+{% endopenapi-operation %}
+
 ## Code Example
 
 {% tabs %}{% tab title="Python" %}{% code overflow="wrap" %}
