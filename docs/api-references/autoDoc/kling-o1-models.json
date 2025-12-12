@@ -1,0 +1,297 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Kling O1 models - AI/ML API",
+    "version": "1.0.0",
+    "description": "Kling Image O1 is a high-quality image generation and editing model from Kling AI, suitable for photorealistic pictures, humans, product shots, and stylized scenes. Kling Video O1 is a family of video models for generating and editing videos from references, images, or input video, optimized for ads, promos, short clips, and social content with smooth motion and consistent style/identity."
+  },
+  "servers": [
+    {
+      "url": "https://api.aimlapi.com"
+    }
+  ],
+  "paths": {
+    "/v1/images/generations": {
+      "post": {
+        "operationId": "_v1_images_generations",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "model": {
+                    "type": "string",
+                    "enum": [
+                      "klingai/image-o1"
+                    ]
+                  },
+                  "prompt": {
+                    "type": "string",
+                    "maxLength": 4000,
+                    "description": "The text prompt describing the content, style, or composition of the image to be generated."
+                  },
+                  "image_urls": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "uri"
+                    },
+                    "minItems": 1,
+                    "maxItems": 10,
+                    "description": "List of URLs or local Base64 encoded images to edit."
+                  },
+                  "aspect_ratio": {
+                    "type": "string",
+                    "enum": [
+                      "21:9",
+                      "16:9",
+                      "4:3",
+                      "3:2",
+                      "1:1",
+                      "2:3",
+                      "3:4",
+                      "9:16"
+                    ],
+                    "default": "16:9",
+                    "description": "The aspect ratio of the generated image."
+                  },
+                  "resolution": {
+                    "type": "string",
+                    "enum": [
+                      "1K",
+                      "2K"
+                    ],
+                    "default": "1K",
+                    "description": "The resolution of the output image."
+                  },
+                  "output_format": {
+                    "type": "string",
+                    "enum": [
+                      "jpeg",
+                      "png",
+                      "webp"
+                    ],
+                    "default": "png",
+                    "description": "The format of the generated image."
+                  },
+                  "num_images": {
+                    "type": "number",
+                    "minimum": 1,
+                    "maximum": 9,
+                    "default": 1,
+                    "description": "The number of images to generate."
+                  }
+                },
+                "required": [
+                  "model",
+                  "prompt",
+                  "image_urls"
+                ],
+                "title": "klingai/image-o1"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "nullable": true,
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "url": {
+                            "type": "string",
+                            "nullable": true,
+                            "description": "The URL where the file can be downloaded from.",
+                            "example": "https://cdn.aimlapi.com/generations/hedgehog/1749730923700-29fe35d2-4aef-4bc5-a911-6c39884d16a8.png"
+                          },
+                          "b64_json": {
+                            "type": "string",
+                            "nullable": true,
+                            "description": "The base64-encoded JSON of the generated image.",
+                            "example": null
+                          }
+                        }
+                      },
+                      "description": "The list of generated images."
+                    },
+                    "meta": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "usage": {
+                          "type": "object",
+                          "nullable": true,
+                          "properties": {
+                            "credits_used": {
+                              "type": "number",
+                              "description": "The number of tokens consumed during generation.",
+                              "example": 120000
+                            }
+                          },
+                          "required": [
+                            "credits_used"
+                          ]
+                        }
+                      },
+                      "description": "Additional details about the generation."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/images/generations": {
+      "post": {
+        "operationId": "_images_generations",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "model": {
+                    "type": "string",
+                    "enum": [
+                      "klingai/image-o1"
+                    ]
+                  },
+                  "prompt": {
+                    "type": "string",
+                    "maxLength": 4000,
+                    "description": "The text prompt describing the content, style, or composition of the image to be generated."
+                  },
+                  "image_urls": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "uri"
+                    },
+                    "minItems": 1,
+                    "maxItems": 10,
+                    "description": "List of URLs or local Base64 encoded images to edit."
+                  },
+                  "aspect_ratio": {
+                    "type": "string",
+                    "enum": [
+                      "21:9",
+                      "16:9",
+                      "4:3",
+                      "3:2",
+                      "1:1",
+                      "2:3",
+                      "3:4",
+                      "9:16"
+                    ],
+                    "default": "16:9",
+                    "description": "The aspect ratio of the generated image."
+                  },
+                  "resolution": {
+                    "type": "string",
+                    "enum": [
+                      "1K",
+                      "2K"
+                    ],
+                    "default": "1K",
+                    "description": "The resolution of the output image."
+                  },
+                  "output_format": {
+                    "type": "string",
+                    "enum": [
+                      "jpeg",
+                      "png",
+                      "webp"
+                    ],
+                    "default": "png",
+                    "description": "The format of the generated image."
+                  },
+                  "num_images": {
+                    "type": "number",
+                    "minimum": 1,
+                    "maximum": 9,
+                    "default": 1,
+                    "description": "The number of images to generate."
+                  }
+                },
+                "required": [
+                  "model",
+                  "prompt",
+                  "image_urls"
+                ],
+                "title": "klingai/image-o1"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "nullable": true,
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "url": {
+                            "type": "string",
+                            "nullable": true,
+                            "description": "The URL where the file can be downloaded from.",
+                            "example": "https://cdn.aimlapi.com/generations/hedgehog/1749730923700-29fe35d2-4aef-4bc5-a911-6c39884d16a8.png"
+                          },
+                          "b64_json": {
+                            "type": "string",
+                            "nullable": true,
+                            "description": "The base64-encoded JSON of the generated image.",
+                            "example": null
+                          }
+                        }
+                      },
+                      "description": "The list of generated images."
+                    },
+                    "meta": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "usage": {
+                          "type": "object",
+                          "nullable": true,
+                          "properties": {
+                            "credits_used": {
+                              "type": "number",
+                              "description": "The number of tokens consumed during generation.",
+                              "example": 120000
+                            }
+                          },
+                          "required": [
+                            "credits_used"
+                          ]
+                        }
+                      },
+                      "description": "Additional details about the generation."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
