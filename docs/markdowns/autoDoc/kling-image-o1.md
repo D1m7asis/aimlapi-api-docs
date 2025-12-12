@@ -20,9 +20,9 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-Kling Image O1 is a high-quality image generation and editing model from Kling AI, available via the fal ai provider. It focuses on photorealistic output, with strong performance on people, product photography, and stylized scenes, and operates primarily in the vision modality.
+Kling Image O1 is a high-quality image generation and editing model developed by Kling AI, focused on photorealistic outputs, strong rendering of people and products, and support for stylized scenes. It is designed for vision-focused tasks such as text-to-image and image-to-image synthesis.
 
-Alongside the core image model, the Kling Video O1 family supports text-to-image, image-to-image, image-to-video, reference-to-video, video-to-video editing, and video-to-video reference workflows. This makes the suite well-suited for creating ads, promos, short clips, and social content where smooth motion and consistent style or identity preservation are important.
+Alongside Kling Image O1, the related Kling Video O1 family supports generating and editing videos from references, still images, or existing video clips. These models target use cases like advertisements, promotional material, short-form clips, and social content, with emphasis on smooth motion and consistent style or identity preservation.
 
 ## How to Make a Call
 
@@ -67,41 +67,41 @@ import requests
 
 response = requests.post(
     "https://api.aimlapi.com/v1/images/generations",
-    headers={"Authorization":"Bearer <YOUR_AIMLAPI_KEY>","Content-Type":"application/json"},
-    data=json.dumps({
-        "model": "klingai/image-o1",
-        "prompt": "Combine the images so the T-Rex is wearing a business suit, sitting in a cozy small café, drinking from the mug. Blur the background slightly to create a bokeh effect.",
-        "image_urls": [
-            "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png",
-            "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/blue-mug.jpg",
-        ],
-    })
+    headers={
+        "Content-Type":"application/json", 
+        "Authorization":"Bearer <YOUR_AIMLAPI_KEY>",
+    },
+    json={
+        "model":"klingai/image-o1",
+        "prompt": "A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses."
+    }
 )
 
 data = response.json()
+print(data)
 ```
 
 {% endcode %}{% endtab %}{% tab title="JavaScript" %}{% code overflow="wrap" %}
 
 ```javascript
-const response = await fetch('https://api.aimlapi.com/v1/images/generations', {
+async function main() {
+  const response = await fetch('https://api.aimlapi.com/v1/images/generations', {
     method: 'POST',
     headers: {
-      "Authorization": "Bearer <YOUR_AIMLAPI_KEY>",
-      "Content-Type": "application/json"
+      'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
+      'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      "model": "klingai/image-o1",
-      "prompt": "Combine the images so the T-Rex is wearing a business suit, sitting in a cozy small café, drinking from the mug. Blur the background slightly to create a bokeh effect.",
-      "image_urls": [
-        "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png",
-        "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/blue-mug.jpg",
-      ],
+      model: 'klingai/image-o1',
+      prompt: 'A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.',
+    }),
+  });
 
-    })
-});
+  const data = await response.json();
+  console.log(JSON.stringify(data, null, 2));
+}
 
-const data = await response.json();
+main();
 ```
 
 {% endcode %}{% endtab %}{% endtabs %}
@@ -113,7 +113,23 @@ const data = await response.json();
 {% code overflow="wrap" %}
 
 ```json5
-{'id': 'img-1734000000-example123', 'object': 'image', 'created': 1734000000, 'model': 'klingai/image-o1', 'data': [{'url': 'https://api.aimlapi.com/v1/files/generated/t-rex-business-cafe.png', 'b64_json': null}], 'usage': {'prompt_tokens': 0, 'completion_tokens': 0, 'total_tokens': 0}}
+{
+  'id': 'gen-1733832000-example',
+  'object': 'image',
+  'created': 1733832000,
+  'model': 'klingai/image-o1',
+  'data': [
+    {
+      'url': 'https://cdn.aimlapi.com/generated-images/klingai/image-o1/example-output.png',
+      'revised_prompt': 'Example output for documentation.'
+    }
+  ],
+  'usage': {
+    'prompt_tokens': 0,
+    'completion_tokens': 0,
+    'total_tokens': 0
+  }
+}
 ```
 
 {% endcode %}
