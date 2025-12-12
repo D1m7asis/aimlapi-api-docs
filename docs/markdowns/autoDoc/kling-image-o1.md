@@ -20,9 +20,9 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-Kling Image O1 is a high-quality image generation and editing model from Kling AI, available via the fal ai provider. It focuses on flagship-level photorealism, strong human and product rendering, and stylized scene creation across vision and text modalities. It is suitable for tasks such as text-to-image, image-to-image, and image-to-video workflows.
+Kling Image O1 is a high-quality image generation and editing model from Kling AI, available via the fal ai provider. It focuses on photorealistic output, with strong performance on people, product photography, and stylized scenes, and operates primarily in the vision modality.
 
-The broader Kling Video O1 family extends these capabilities to video generation and editing from references, images, or input videos, enabling ads, promos, short clips, and social content with smooth motion and consistent style or identity.
+Alongside the core image model, the Kling Video O1 family supports text-to-image, image-to-image, image-to-video, reference-to-video, video-to-video editing, and video-to-video reference workflows. This makes the suite well-suited for creating ads, promos, short clips, and social content where smooth motion and consistent style or identity preservation are important.
 
 ## How to Make a Call
 
@@ -113,7 +113,7 @@ const data = await response.json();
 {% code overflow="wrap" %}
 
 ```json5
-{'id': 'img-1739273982-AbCdEf123456', 'object': 'images.response', 'created': 1739273982, 'model': 'klingai/image-o1', 'data': [{'url': 'https://cdn.aimlapi.com/generated/klingai/image-o1/AbCdEf123456.png', 'b64_json': null, 'revised_prompt': 'Combine the images so the T-Rex is wearing a business suit, sitting in a cozy small café, drinking from the mug. Blur the background slightly to create a bokeh effect.'}], 'usage': {'prompt_tokens': 0, 'completion_tokens': 0, 'total_tokens': 0}}
+{'id': 'img-1734000000-example123', 'object': 'image', 'created': 1734000000, 'model': 'klingai/image-o1', 'data': [{'url': 'https://api.aimlapi.com/v1/files/generated/t-rex-business-cafe.png', 'b64_json': null}], 'usage': {'prompt_tokens': 0, 'completion_tokens': 0, 'total_tokens': 0}}
 ```
 
 {% endcode %}
