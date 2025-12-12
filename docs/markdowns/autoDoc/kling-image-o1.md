@@ -60,12 +60,8 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-{% openapi-operation spec="o1" path="/v1/chat/completions" method="post" %}
-[OpenAPI o1](https://raw.githubusercontent.com/aimlapi/api-docs/main/docs/api-references/text-models-llm/OpenAI/o1.json)
-{% endopenapi-operation %}
-
-{% openapi-operation spec="o1" path="/chat/completions" method="post" %}
-[OpenAPI o1](https://raw.githubusercontent.com/aimlapi/api-docs/main/docs/api-references/text-models-llm/OpenAI/o1.json)
+{% openapi-operation spec="qwen-image-edit" path="/v1/images/generations" method="post" %}
+[OpenAPI qwen-image-edit](https://raw.githubusercontent.com/aimlapi/api-docs/main/docs/api-references/image-models/Alibaba-Cloud/qwen-image-edit.json)
 {% endopenapi-operation %}
 
 ## Code Example
