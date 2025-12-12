@@ -3,7 +3,7 @@
   "info": {
     "title": "Kling Image O1 - AI/ML API",
     "version": "1.0.0",
-    "description": "Kling Image O1 is a high-quality image generation and editing model from Kling AI, delivering flagship-level photorealism, strong human and product rendering, and stylized scenes. The Kling Video O1 family supports video generation and editing from references, images, or input videos for ads, promos, short clips, and social content, focusing on smooth motion and consistent style/identity."
+    "description": "Kling Image O1 is a high-quality image generation and editing model from Kling AI, delivering flagship-level photorealism and strong performance on people, product photography, and stylized scenes. The Kling Video O1 family supports video generation and editing from references, images, or input videos, suitable for ads, promos, short clips, and social content with smooth motion and style/ID preservation."
   },
   "servers": [
     {
