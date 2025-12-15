@@ -16,9 +16,9 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-DeepSeek-V3.2-Speciale is an experimental large language model developed by DeepSeek, optimized for complex reasoning and long-context chat-based workflows. It supports text and code generation, with a context window of up to 128,000 tokens, and is designed to operate in a thinking-focused mode for structured, multi-step problem solving.
+DeepSeek-V3.2-Speciale is an experimental reasoning-focused large language model developed by DeepSeek for text and code generation. It is optimized for complex, multi-step reasoning workflows and can handle long-context inputs of up to 128K tokens, making it suitable for analytically intensive tasks and scenarios that require maintaining detailed context over extended inputs.
 
-The model is well suited for chat completion, agent-style behaviors, and tasks that benefit from explicit reasoning traces, robust handling of difficult queries, and integration with tools following the DeepSeek specification, including tool calling and Chat Prefix/FIM-style completion.
+The model emphasizes accuracy on difficult queries and supports advanced interaction patterns such as tool calling and specialized completion modes defined by DeepSeek’s specification. It is intended for use in agentic systems, complex problem solving, and applications that benefit from explicit intermediate reasoning rather than broad, open-ended text generation.
 
 ## How to Make a Call
 
