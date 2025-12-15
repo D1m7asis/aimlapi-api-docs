@@ -6,8 +6,8 @@
 This documentation is valid for the following list of our models:
 
 * `deepseek/deepseek-v3.2-speciale`
-{% endhint %}
-{% endcolumn %}
+  {% endhint %}
+  {% endcolumn %}
 
 {% column width="33.33333333333334%" %}
 <a href="https://aimlapi.com/app/deepseek/deepseek-v3.2-speciale" class="button primary">Try in Playground</a>
@@ -16,9 +16,9 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-DeepSeek-V3.2-Speciale is an experimental reasoning-focused large language model developed by DeepSeek for text and code generation. It is optimized for complex, multi-step reasoning workflows and can handle long-context inputs of up to 128K tokens, making it suitable for analytically intensive tasks and scenarios that require maintaining detailed context over extended inputs.
+DeepSeek-V3.2-Speciale is an experimental reasoning-oriented large language model developed by DeepSeek. It operates in a thinking-focused configuration and is optimized for complex reasoning tasks that require long-context processing of up to 128K tokens.
 
-The model emphasizes accuracy on difficult queries and supports advanced interaction patterns such as tool calling and specialized completion modes defined by DeepSeek’s specification. It is intended for use in agentic systems, complex problem solving, and applications that benefit from explicit intermediate reasoning rather than broad, open-ended text generation.
+The model supports tool calling and is compatible with Chat Prefix and fill-in-the-middle (FIM) style completions as defined in the DeepSeek specification. It is intended for demanding reasoning workflows, agent-like behaviors, and structured chains of thought where robustness on challenging problems and extended context handling are important, and is offered as a time-limited “Speciale” endpoint.
 
 ## How to Make a Call
 
@@ -38,15 +38,15 @@ At the bottom of this page, you'll find a code example that shows how to structu
 :digit_three: **Modify the code example**
 
 :black_small_square: Replace `<YOUR_AIMLAPI_KEY>` with your actual AI/ML API key.  
-:black_small_square: Insert your question or request into the `content` field—this is what the model will respond to.
+:black_small_square: Adjust the input field used by this model (for example, prompt, input text, instructions, media source, or other model-specific input) to match your request.
 
 :digit_four: <sup><sub><mark style="background-color:yellow;">**(Optional)**</mark></sub></sup> **Adjust other optional parameters if needed**
 
-Only `model` and `messages` are required parameters for this model (and they are already correctly set in the example), but you can include optional parameters to fine-tune behavior. Below, you can find the corresponding **API schema**, which lists all available parameters and usage notes.
+Only the required parameters shown in the example are needed to run the request, but you can include optional parameters to fine-tune behavior. Below, you can find the corresponding **API schema**, which lists all available parameters and usage notes.
 
 :digit_five: **Run your modified code**
 
-Run your modified code inside your development environment. Response time depends on many factors, but for simple prompts it rarely exceeds a few seconds.
+Run your modified code inside your development environment. Response time depends on many factors, but for simple requests it rarely exceeds a few seconds.
 
 {% hint style="success" %}
 If you need a more detailed walkthrough for setting up your development environment and making a request step-by-step, feel free to use our **[Quickstart guide.](https://docs.aimlapi.com/quickstart/setting-up)**
