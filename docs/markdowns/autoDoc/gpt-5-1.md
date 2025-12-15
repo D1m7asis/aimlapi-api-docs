@@ -19,9 +19,9 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-GPT-5.1 is OpenAI’s flagship large language model for text and code, designed to provide faster responses and stronger reasoning capabilities than previous generations. It supports conversational chat-completion and general response generation across a wide range of tasks.
+GPT-5.1 is OpenAI’s next-generation flagship large language model for text and code, designed to provide faster responses and stronger reasoning capabilities. It supports general-purpose chat and instruction-following use cases, with a focus on accuracy and responsiveness for interactive applications.
 
-The GPT-5.1 family includes a stable “chat latest” alias for production use and specialized Codex variants optimized for code understanding and generation, including a lighter Codex Mini model suitable for high-volume or latency-sensitive integrations.
+The model family includes the main general-purpose variant, a stable “chat latest” alias for production use, and specialized Codex derivatives optimized for software development workflows, agentic behaviors, and high-volume, cost-efficient coding and automation tasks.
 
 ## How to Make a Call
 
