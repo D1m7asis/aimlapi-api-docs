@@ -9,8 +9,8 @@ This documentation is valid for the following list of our models:
 * `openai/gpt-5-1-chat-latest`
 * `openai/gpt-5-1-codex`
 * `openai/gpt-5-1-codex-mini`
-  {% endhint %}
-  {% endcolumn %}
+{% endhint %}
+{% endcolumn %}
 
 {% column width="33.33333333333334%" %}
 <a href="https://aimlapi.com/app/?model=openai/gpt-5-1&mode=chat" class="button primary">Try in Playground</a>
@@ -19,9 +19,9 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-GPT-5.1 is OpenAI’s next-generation flagship large language model focused on fast, high-quality reasoning for text and code. It supports interactive chat-style workflows and is suitable for a broad range of natural language and programming tasks.
+GPT-5.1 is OpenAI’s next-generation flagship large language model for text and code, designed to provide faster responses and stronger reasoning capabilities compared to previous generations. It supports conversational chat-completion and general response-generation workflows for a wide range of applications.
 
-The GPT-5.1 family includes a stable chat-oriented alias for general conversation, a Codex variant specialized for software development and agentic tooling, and a lightweight Codex Mini variant designed for high-volume, latency-sensitive integrations.
+The GPT-5.1 family includes a “Chat Latest” alias that always targets the latest stable GPT-5.1 release, along with Codex and Codex Mini variants specialized for programming and agentic workflows. The Codex models are tuned for code understanding, generation, and transformation, with Codex Mini optimized for high-volume, large-scale integrations.
 
 ## How to Make a Call
 
