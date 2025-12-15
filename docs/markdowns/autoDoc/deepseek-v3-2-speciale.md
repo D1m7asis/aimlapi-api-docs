@@ -6,18 +6,20 @@
 This documentation is valid for the following list of our models:
 
 * `deepseek/deepseek-v3.2-speciale`
-  {% endhint %}
-  {% endcolumn %}
+{% endhint %}
+{% endcolumn %}
 
-{% column width="33.33333333333334%" %} <a href="https://aimlapi.com/app/deepseek/deepseek-v3.2-speciale" class="button primary">Try in Playground</a>
+{% column width="33.33333333333334%" %}
+<a href="https://aimlapi.com/app/deepseek/deepseek-v3.2-speciale" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 
 ## Model Overview
 
-DeepSeek-V3.2-Speciale is an experimental large language model from DeepSeek, focused on advanced reasoning and long-context dialogue. It operates primarily in a thinking-only mode to improve accuracy on complex queries and supports contexts up to 128,000 tokens.
+DeepSeek-V3.2-Speciale is an experimental large language model developed by DeepSeek, optimized for complex reasoning and long-context chat-based workflows. It supports text and code generation, with a context window of up to 128,000 tokens, and is designed to operate in a thinking-focused mode for structured, multi-step problem solving.
 
-The model is optimized for chat-completion style interactions over text and code, including support for tool calling and Chat Prefix/FIM completion according to DeepSeek’s specification. It is exposed as a special-purpose endpoint with limited availability, making it suitable for targeted high-difficulty reasoning workloads.
+The model is well suited for chat completion, agent-style behaviors, and tasks that benefit from explicit reasoning traces, robust handling of difficult queries, and integration with tools following the DeepSeek specification, including tool calling and Chat Prefix/FIM-style completion.
+
 ## How to Make a Call
 
 <details>
@@ -52,9 +54,15 @@ If you need a more detailed walkthrough for setting up your development environm
 
 </details>
 
-# API Schema
-> Здесь вставить схему OpenAPI
+## API Schema
 
+{% openapi-operation spec="deepseek-chat-v3.1" path="/v1/chat/completions" method="post" %}
+[OpenAPI deepseek-chat-v3.1](https://raw.githubusercontent.com/aimlapi/api-docs/main/docs/api-references/text-models-llm/DeepSeek/deepseek-chat-v3.1.json)
+{% endopenapi-operation %}
+
+{% openapi-operation spec="deepseek-chat-v3.1" path="/chat/completions" method="post" %}
+[OpenAPI deepseek-chat-v3.1](https://raw.githubusercontent.com/aimlapi/api-docs/main/docs/api-references/text-models-llm/DeepSeek/deepseek-chat-v3.1.json)
+{% endopenapi-operation %}
 
 ## Code Example
 
@@ -62,46 +70,54 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ```python
 import requests
+
 response = requests.post(
     "https://api.aimlapi.com/v1/chat/completions",
     headers={
-      "Authorization":"Bearer <YOUR_AIMLAPI_KEY>",
-      "Content-Type":"application/json"
+        "Content-Type":"application/json", 
+        "Authorization":"Bearer <YOUR_AIMLAPI_KEY>",
     },
-    data=json.dumps({
-     "model": "deepseek/deepseek-v3.2-speciale",
-     "messages": [
-        {
-          "role": "user",
-          "content": "How to learn javascript?"
-        }
-      ],
-      "stream": False,
-    })
+    json={
+        "model":"deepseek/deepseek-v3.2-speciale",
+        "messages":[
+            {
+                "role":"user",
+                "content":"Hello"
+            }
+        ]
+    }
 )
+
 data = response.json()
+print(data)
 ```
 
 {% endcode %}{% endtab %}{% tab title="JavaScript" %}{% code overflow="wrap" %}
 
 ```javascript
-const response = await fetch('https://api.aimlapi.com/v1/chat/completions', {
+async function main() {
+  const response = await fetch('https://api.aimlapi.com/v1/chat/completions', {
     method: 'POST',
     headers: {
-      "Authorization": "Bearer <YOUR_AIMLAPI_KEY>",
-      "Content-Type": "application/json"
+      'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
+      'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      "model": "deepseek/deepseek-v3.2-speciale",
-      "messages": [
+      model: 'deepseek/deepseek-v3.2-speciale',
+      messages:[
           {
-            "role": "user",
-            "content": "How to learn javascript?"
+              role:'user',
+              content: 'Hello'
           }
-        ],
-        "stream": false,
-});
-const data = await response.json();
+      ]
+    }),
+  });
+
+  const data = await response.json();
+  console.log(JSON.stringify(data, null, 2));
+}
+
+main();
 ```
 
 {% endcode %}{% endtab %}{% endtabs %}
@@ -113,9 +129,27 @@ const data = await response.json();
 {% code overflow="wrap" %}
 
 ```json5
-{'id': 'chatcmpl-deepseek-v3-2-speciale-example', 'object': 'chat.completion', 'choices': [{'index': 0, 'finish_reason': 'stop', 'logprobs': null, 'message': {'role': 'assistant', 'content': 'To learn JavaScript effectively, start with the basics of variables, functions, and control flow using a beginner-friendly tutorial. Then build small projects in the browser (like a todo list or a simple game), read other people’s code, and practice regularly. Use MDN Web Docs as a reference, and gradually explore modern topics such as ES6 features, async/await, and working with APIs.', 'refusal': null}}], 'created': 1744193377, 'model': 'deepseek/deepseek-v3.2-speciale', 'usage': {'prompt_tokens': 18, 'completion_tokens': 88, 'total_tokens': 106}}
+{
+  'id': 'gen-1733832000-example',
+  'object': 'image',
+  'created': 1733832000,
+  'model': 'deepseek/deepseek-v3.2-speciale',
+  'data': [
+    {
+      'url': 'https://cdn.aimlapi.com/generated-images/deepseek/deepseek-v3.2-speciale/example-output.png',
+      'revised_prompt': 'Example output for documentation.'
+    }
+  ],
+  'usage': {
+    'prompt_tokens': 0,
+    'completion_tokens': 0,
+    'total_tokens': 0
+  }
+}
 ```
 
 {% endcode %}
 
-</details>Generated from AD-242
+</details>
+
+<!-- Generated from AD-242 -->
