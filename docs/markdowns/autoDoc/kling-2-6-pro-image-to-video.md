@@ -6,8 +6,8 @@
 This documentation is valid for the following list of our models:
 
 * `klingai/video-v2-6-pro-image-to-video`
-  {% endhint %}
-  {% endcolumn %}
+{% endhint %}
+{% endcolumn %}
 
 {% column width="33.33333333333334%" %}
 <a href="https://aimlapi.com/app/?model=klingai/video-v2-6-pro-image-to-video" class="button primary">Try in Playground</a>
@@ -16,9 +16,9 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-Kling 2.6 Pro image-to-video is a video generation model from KlingAI, hosted via fal.ai, designed to create cinematic-quality clips with smooth, realistic motion and detailed visuals. It supports both vision and audio modalities, including native audio generation synchronized with the generated video.
+Kling 2.6 Pro image-to-video is a video generation model developed by KlingAI that transforms a single static image into a short, cinematic video clip. It focuses on smooth, realistic motion, high visual fidelity, and detailed rendering, and can optionally generate native audio alongside the visuals.
 
-The model is optimized for image-to-video animation and text-to-video generation, making it well-suited for marketing promos, advertisements, social media content, and rapid video mockups where high visual fidelity and coherent motion are required.
+The model is particularly suited for use cases such as promotional videos, advertising creatives, social media content, and rapid video mockups, where quick iteration and visually rich output are important. It is optimized for image-to-video workflows that bring still assets like portraits, product shots, and environment scenes to life.
 
 ## How to Make a Call
 
@@ -56,13 +56,8 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-{% openapi-operation spec="kling-2-6-pro-image-to-video" path="/v2/video/generations" method="post" %}
-{% endopenapi-operation %}
-
-{% openapi-operation spec="kling-2-6-pro-image-to-video" path="/v1/video/generations" method="post" %}
-{% endopenapi-operation %}
-
-{% openapi-operation spec="kling-2-6-pro-image-to-video" path="/video/generations" method="post" %}
+{% openapi-operation spec="kling-2-6-pro-image-to-video" path="/v2/generate/video/kling/generation" method="get" %}
+[OpenAPI kling-2-6-pro-image-to-video](https://raw.githubusercontent.com/aimlapi/api-docs/main/docs/api-references/video-models/Kling-AI/kling-2-6-pro-image-to-video.json)
 {% endopenapi-operation %}
 
 ## Code Example
@@ -70,46 +65,13 @@ If you need a more detailed walkthrough for setting up your development environm
 {% tabs %}{% tab title="Python" %}{% code overflow="wrap" %}
 
 ```python
-import requests
 
-def main():
-    url = "https://api.aimlapi.com/v2/video/generations"
-    payload = {
-        "model": "klingai/video-v2-6-pro-image-to-video",
-        "prompt": "A jellyfish in the ocean",
-        "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/35/Maldivesfish2.jpg",
-    }
-    headers = {"Authorization": "Bearer <YOUR_API_KEY>", "Content-Type": "application/json"}
-
-    response = requests.post(url, json=payload, headers=headers)
-    print("Generation:", response.json())
-
-
-if __name__ == "__main__":
-    main()
 ```
 
 {% endcode %}{% endtab %}{% tab title="JavaScript" %}{% code overflow="wrap" %}
 
 ```javascript
-const main = async () => {
-  const response = await fetch('https://api.aimlapi.com/v2/video/generations', {
-    method: 'POST',
-    headers: {
-      Authorization: 'Bearer <YOUR_API_KEY>',
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      model: 'klingai/video-v2-6-pro-image-to-video',
-      prompt: 'A jellyfish in the ocean',
-      image_url: 'https://upload.wikimedia.org/wikipedia/commons/3/35/Maldivesfish2.jpg',
-    }),
-  }).then((res) => res.json());
 
-  console.log('Generation:', response);
-};
-
-main()
 ```
 
 {% endcode %}{% endtab %}{% endtabs %}
@@ -121,11 +83,27 @@ main()
 {% code overflow="wrap" %}
 
 ```json5
-{'id': 'vid-gen-1744193377-a1b2c3d4e5', 'object': 'video.generation', 'model': 'klingai/video-v2-6-pro-image-to-video', 'created': 1744193377, 'status': 'queued', 'output': {'video_url': null, 'thumbnail_url': null}, 'meta': {'duration_seconds': 5, 'mode': 'image-to-video'}, 'usage': {'input_tokens': 0, 'output_tokens': 0, 'prompt_tokens': 0, 'completion_tokens': 0, 'total_tokens': 0}}
+{
+  'id': 'gen-1733832000-example',
+  'object': 'image',
+  'created': 1733832000,
+  'model': 'klingai/video-v2-6-pro-image-to-video',
+  'data': [
+    {
+      'url': 'https://cdn.aimlapi.com/generated-images/klingai/video-v2-6-pro-image-to-video/example-output.png',
+      'revised_prompt': 'Example output for documentation.'
+    }
+  ],
+  'usage': {
+    'prompt_tokens': 0,
+    'completion_tokens': 0,
+    'total_tokens': 0
+  }
+}
 ```
 
 {% endcode %}
 
 </details>
 
-<!-- Generated from AA-232 -->
+<!-- Generated from AD-240 -->
