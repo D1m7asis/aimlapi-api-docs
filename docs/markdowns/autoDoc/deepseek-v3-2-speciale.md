@@ -56,12 +56,12 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-{% openapi-operation spec="deepseek-chat-v3.1" path="/v1/chat/completions" method="post" %}
-[OpenAPI deepseek-chat-v3.1](https://raw.githubusercontent.com/aimlapi/api-docs/main/docs/api-references/text-models-llm/DeepSeek/deepseek-chat-v3.1.json)
+{% openapi-operation spec="deepseek-v3-2-speciale" path="/v1/chat/completions" method="post" %}
+[OpenAPI deepseek-v3-2-speciale](https://raw.githubusercontent.com/aimlapi/api-docs/main/docs/api-references/text-models-llm/DeepSeek/deepseek-v3-2-speciale.json)
 {% endopenapi-operation %}
 
-{% openapi-operation spec="deepseek-chat-v3.1" path="/chat/completions" method="post" %}
-[OpenAPI deepseek-chat-v3.1](https://raw.githubusercontent.com/aimlapi/api-docs/main/docs/api-references/text-models-llm/DeepSeek/deepseek-chat-v3.1.json)
+{% openapi-operation spec="deepseek-v3-2-speciale" path="/chat/completions" method="post" %}
+[OpenAPI deepseek-v3-2-speciale](https://raw.githubusercontent.com/aimlapi/api-docs/main/docs/api-references/text-models-llm/DeepSeek/deepseek-v3-2-speciale.json)
 {% endopenapi-operation %}
 
 ## Code Example
