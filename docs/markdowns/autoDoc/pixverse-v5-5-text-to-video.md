@@ -1,4 +1,4 @@
-# PixVerse v5.5 — Text to Video
+# PixVerse V5.5 — Text to Video
 
 {% columns %}
 {% column width="66.66666666666666%" %}
@@ -16,9 +16,9 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-PixVerse v5.5 Text-to-Video is a video generation model developed by PixVerse that creates high-quality clips from text prompts, supporting resolutions up to 1080p. It is designed for improved motion stability and frame-to-frame consistency to reduce flicker and visual artifacts in the generated videos.
+PixVerse V5.5 — Text to Video is a high-quality text-to-video generation model developed by PixVerse. It generates videos from text prompts at resolutions up to 1080p, with an emphasis on stable motion and consistent frame-to-frame rendering for smoother output.
 
-The model also supports audio and lip-sync, enabling synchronized speech, music, or sound effects as part of the output. It is well suited for advertising content, animation, short-form videos for social media, marketing assets, and other creative video production workflows.
+The model also supports audio and lip-sync, enabling videos where character speech aligns with mouth movements. These capabilities make it well suited for advertising creatives, animated content, and short-form video clips.
 
 ## How to Make a Call
 
