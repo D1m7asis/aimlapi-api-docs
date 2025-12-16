@@ -16,9 +16,9 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-DeepSeek-V3.2-Speciale is an experimental reasoning-focused large language model developed by DeepSeek. It is optimized for complex, multi-step problem solving and can work with very long contexts of up to 128K tokens, making it suitable for demanding analytical and reasoning-intensive workflows.
+DeepSeek-V3.2-Speciale is an experimental reasoning-focused large language model developed by DeepSeek, optimized for complex analytical tasks and workloads requiring extended context windows of up to 128K tokens. It is designed to operate in a thinking-only mode, emphasizing structured reasoning and accuracy on difficult or multi-step prompts.
 
-The model emphasizes a “thinking-only” configuration and supports advanced capabilities such as tool calling and prefix/FIM-style text completion according to DeepSeek’s specification. It targets high-accuracy performance on difficult queries and is intended for experimental use rather than long-term, stable deployment.
+The model supports advanced capabilities such as tool calling and DeepSeek-specific behaviors including Chat Prefix and Fill-in-the-Middle (FIM) style completion, making it suitable for agentic workflows and tooling-heavy integrations that benefit from long-context reasoning and precise intermediate thought processes.
 
 ## How to Make a Call
 
@@ -28,7 +28,7 @@ The model emphasizes a “thinking-only” configuration and supports advanced c
 
 :digit_one: **Setup You Can’t Skip**
 
-:black_small_square: [**Create an Account**](https://aimlapi.com/app/sign-up): Visit the AI/ML API website and create an account (if you don’t have one yet).␠␠
+:black_small_square: [**Create an Account**](https://aimlapi.com/app/sign-up): Visit the AI/ML API website and create an account (if you don’t have one yet).  
 :black_small_square: [**Generate an API Key**](https://aimlapi.com/app/keys): After logging in, navigate to your account dashboard and generate your API key. Ensure the key is enabled on the UI.
 
 :digit_two: **Copy the code example**
@@ -37,7 +37,7 @@ At the bottom of this page, you'll find a code example that shows how to structu
 
 :digit_three: **Modify the code example**
 
-:black_small_square: Replace `<YOUR_AIMLAPI_KEY>` with your actual AI/ML API key.␠␠
+:black_small_square: Replace `<YOUR_AIMLAPI_KEY>` with your actual AI/ML API key.  
 :black_small_square: Adjust the input field used by this model (for example, prompt, input text, instructions, media source, or other model-specific input) to match your request.
 
 :digit_four: <sup><sub><mark style="background-color:yellow;">**(Optional)**</mark></sub></sup> **Adjust other optional parameters if needed**
