@@ -16,9 +16,9 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-Kling Video O1 — Video to Video Reference is a video generation and transformation model developed by Kling AI. It performs video-to-video editing by applying a reference style or identity to source footage, enabling appearance transfer across clips while preserving motion and structure from the original video.
+Kling Video O1 — Video to Video Reference is a video generation model developed by Kling AI for video-to-video transformation with style and identity control. It takes an existing video as a reference and generates new clips that inherit the visual identity, appearance, and stylistic characteristics of the source.
 
-The model is well-suited for maintaining consistent characters, branding elements, or artistic style over multiple outputs derived from related source videos. It is particularly useful in workflows that require stable visual identity across a sequence of generated variations, such as marketing assets, character-driven content, or stylized cinematic edits.
+The model is suited for scenarios where you need a consistent visual look across multiple videos, such as maintaining brand appearance, recurring characters, or a specific cinematic style while creating varied outputs from an original reference clip.
 
 ## How to Make a Call
 
