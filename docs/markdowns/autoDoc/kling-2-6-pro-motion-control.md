@@ -6,7 +6,6 @@
 This documentation is valid for the following list of our models:
 
 * `klingai/video-v2-6-pro-motion-control`
-* `klingai/video-v2.6-pro motion-control`
   {% endhint %}
   {% endcolumn %}
 
@@ -17,9 +16,9 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-Kling 2.6 Pro motion-control is a cinematic video generation model developed by KlingAI, designed for high-fidelity motion transfer. It takes motion from a reference video and applies it to a target character, preserving complex choreography, nuanced gestures, and detailed visual appearance across frames.
+Kling 2.6 Pro motion-control is a next-generation cinematic video generation model developed by KlingAI. It focuses on transferring motion from reference videos to arbitrary target characters, producing smooth, realistic movement, detailed visuals, and native audio when enabled.
 
-The model produces smooth, realistic motion with rich visual detail and can natively generate accompanying audio, making it suitable for creative production workflows such as dance sequences, expressive character animation, and other motion-intensive content where fluidity and realism are critical.
+The model supports both image-to-video and video-to-video workflows, making it suitable for motion transfer, performance recreation, and creative video production. Its Pro mode emphasizes high fidelity and strong temporal consistency, which is particularly valuable for complex dance choreography, expressive body language, and intricate gesture sequences.
 
 ## How to Make a Call
 
