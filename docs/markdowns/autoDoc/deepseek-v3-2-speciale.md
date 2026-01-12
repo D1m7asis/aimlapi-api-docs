@@ -16,9 +16,9 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-DeepSeek-V3.2-Speciale is an experimental reasoning-focused large language model developed by DeepSeek, optimized for complex analytical tasks and workloads requiring extended context windows of up to 128K tokens. It is designed to operate in a thinking-only mode, emphasizing structured reasoning and accuracy on difficult or multi-step prompts.
+DeepSeek-V3.2-Speciale is an experimental large language model developed by DeepSeek, focused on advanced reasoning over long text and code inputs. It is optimized for complex analytical tasks and can handle contexts up to 128,000 tokens, making it suitable for workflows that involve extensive documents, multi-step problem solving, or structured reasoning pipelines.
 
-The model supports advanced capabilities such as tool calling and DeepSeek-specific behaviors including Chat Prefix and Fill-in-the-Middle (FIM) style completion, making it suitable for agentic workflows and tooling-heavy integrations that benefit from long-context reasoning and precise intermediate thought processes.
+The model supports tool calling as well as prefix and fill-in-the-middle style completions following the DeepSeek specification. It is provided in a thinking-oriented configuration intended for high-quality chain-of-thought style processing in demanding reasoning use cases.
 
 ## How to Make a Call
 
@@ -57,11 +57,11 @@ If you need a more detailed walkthrough for setting up your development environm
 ## API Schema
 
 {% openapi-operation spec="deepseek-v3-2-speciale" path="/v1/chat/completions" method="post" %}
-[OpenAPI deepseek-v3-2-speciale](https://raw.githubusercontent.com/aimlapi/api-docs/main/docs/api-references/text-models-llm/DeepSeek/deepseek-v3-2-speciale.json)
+[OpenAPI deepseek-v3-2-speciale](https://raw.githubusercontent.com/aimlapi/api-docs/main/docs/api-references/text-models-llm/deepseek/deepseek-v3-2-speciale.json)
 {% endopenapi-operation %}
 
 {% openapi-operation spec="deepseek-v3-2-speciale" path="/chat/completions" method="post" %}
-[OpenAPI deepseek-v3-2-speciale](https://raw.githubusercontent.com/aimlapi/api-docs/main/docs/api-references/text-models-llm/DeepSeek/deepseek-v3-2-speciale.json)
+[OpenAPI deepseek-v3-2-speciale](https://raw.githubusercontent.com/aimlapi/api-docs/main/docs/api-references/text-models-llm/deepseek/deepseek-v3-2-speciale.json)
 {% endopenapi-operation %}
 
 ## Code Example
@@ -152,4 +152,4 @@ main();
 
 </details>
 
-<!-- Generated from AD-242 -->
+<!-- Generated from AA-230 -->
