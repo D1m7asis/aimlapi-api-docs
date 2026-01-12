@@ -28,8 +28,8 @@ The model is optimized for fast iteration in creative workflows, making it suita
 
 :digit_one: **Setup You Can’t Skip**
 
-- :black_small_square: [**Create an Account**](https://aimlapi.com/app/sign-up): Visit the AI/ML API website and create an account (if you don’t have one yet).  
-- :black_small_square: [**Generate an API Key**](https://aimlapi.com/app/keys): After logging in, navigate to your account dashboard and generate your API key. Ensure the key is enabled on the UI.
+- [**Create an Account**](https://aimlapi.com/app/sign-up): Visit the AI/ML API website and create an account (if you don’t have one yet).  
+- [**Generate an API Key**](https://aimlapi.com/app/keys): After logging in, navigate to your account dashboard and generate your API key. Ensure the key is enabled on the UI.
 
 :digit_two: **Copy the code example**
 
@@ -37,8 +37,8 @@ At the bottom of this page, you'll find a code example that shows how to structu
 
 :digit_three: **Modify the code example**
 
-- :black_small_square: Replace `<YOUR_AIMLAPI_KEY>` with your actual AI/ML API key.  
-- :black_small_square: Adjust the input field used by this model (for example, prompt, input text, instructions, media source, or other model-specific input) to match your request.
+- Replace `<YOUR_AIMLAPI_KEY>` with your actual AI/ML API key.  
+- Adjust the input field used by this model (for example, prompt, input text, instructions, media source, or other model-specific input) to match your request.
 
 :digit_four: <sup><sub><mark style="background-color:yellow;">**(Optional)**</mark></sub></sup> **Adjust other optional parameters if needed**
 
