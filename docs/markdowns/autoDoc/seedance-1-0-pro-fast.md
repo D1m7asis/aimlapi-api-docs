@@ -16,9 +16,9 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-Seedance 1.0 Pro Fast is a video generation model developed by Bytedance and provided by Segmind, optimized for fast creation of short cinematic clips. It supports both text-to-video and image-to-video generation, producing approximately 10-second videos with an emphasis on high visual fidelity, realistic motion, and dynamic lighting.
+Seedance 1.0 Pro Fast is a video generation model developed by Bytedance and provided by Segmind, designed for high-speed text-to-video and image-to-video synthesis. It focuses on producing short, approximately 10-second cinematic clips with high visual fidelity, realistic motion, and dynamic lighting.
 
-The model is suitable for rapid iteration in creative workflows, including concept visualization, visually rich promotional snippets, and other short-form content where high-quality, expressive motion and lighting are important.
+The model is well-suited for rapid iteration in creative workflows such as concept visualization, short-form promotional content, and other scenarios where visually rich, cinematic sequences need to be generated quickly from either textual descriptions or reference images.
 
 ## How to Make a Call
 
@@ -56,22 +56,15 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-**Endpoint:** `POST /v2/video/generations`
-**Purpose:** Generate videos from prompts and/or media inputs (provider-dependent).
+Generate videos from prompts and/or media inputs (provider-dependent).
 
 {% openapi-operation spec="bytedance-seedance-1-0-pro-fast" path="/v2/video/generations" method="post" %}
 [OpenAPI bytedance-seedance-1-0-pro-fast](https://raw.githubusercontent.com/aimlapi/api-docs/main/docs/api-references/video-models/bytedance/bytedance-seedance-1-0-pro-fast.json)
 {% endopenapi-operation %}
 
-**Endpoint:** `POST /v1/video/generations`
-**Purpose:** API operation for this model.
-
 {% openapi-operation spec="bytedance-seedance-1-0-pro-fast" path="/v1/video/generations" method="post" %}
 [OpenAPI bytedance-seedance-1-0-pro-fast](https://raw.githubusercontent.com/aimlapi/api-docs/main/docs/api-references/video-models/bytedance/bytedance-seedance-1-0-pro-fast.json)
 {% endopenapi-operation %}
-
-**Endpoint:** `POST /video/generations`
-**Purpose:** API operation for this model.
 
 {% openapi-operation spec="bytedance-seedance-1-0-pro-fast" path="/video/generations" method="post" %}
 [OpenAPI bytedance-seedance-1-0-pro-fast](https://raw.githubusercontent.com/aimlapi/api-docs/main/docs/api-references/video-models/bytedance/bytedance-seedance-1-0-pro-fast.json)
