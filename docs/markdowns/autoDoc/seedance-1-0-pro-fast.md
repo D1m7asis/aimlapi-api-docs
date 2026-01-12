@@ -6,8 +6,8 @@
 This documentation is valid for the following list of our models:
 
 * `bytedance/seedance-1-0-pro-fast`
-  {% endhint %}
-  {% endcolumn %}
+{% endhint %}
+{% endcolumn %}
 
 {% column width="33.33333333333334%" %}
 <a href="https://aimlapi.com/app/?model=bytedance/seedance-1-0-pro-fast&mode=video" class="button primary">Try in Playground</a>
@@ -16,9 +16,9 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-Seedance 1.0 Pro Fast is a video generation model developed by Bytedance and provided by Segmind, designed for high-speed text-to-video and image-to-video synthesis. It focuses on producing short, approximately 10-second cinematic clips with high visual fidelity, realistic motion, and dynamic lighting.
+Seedance 1.0 Pro Fast is a video generation model developed by Bytedance and provided by Segmind, optimized for rapid creation of short cinematic clips. It supports both text-to-video and image-to-video workflows, producing approximately 10-second outputs with high visual fidelity, realistic motion, and expressive lighting.
 
-The model is well-suited for rapid iteration in creative workflows such as concept visualization, short-form promotional content, and other scenarios where visually rich, cinematic sequences need to be generated quickly from either textual descriptions or reference images.
+The model is well-suited for tasks such as concept visualization, creative content production, and short promotional material, where fast iteration and visually rich results from simple text descriptions or reference images are important.
 
 ## How to Make a Call
 
@@ -59,14 +59,6 @@ If you need a more detailed walkthrough for setting up your development environm
 Generate videos from prompts and/or media inputs (provider-dependent).
 
 {% openapi-operation spec="bytedance-seedance-1-0-pro-fast" path="/v2/video/generations" method="post" %}
-[OpenAPI bytedance-seedance-1-0-pro-fast](https://raw.githubusercontent.com/aimlapi/api-docs/main/docs/api-references/video-models/bytedance/bytedance-seedance-1-0-pro-fast.json)
-{% endopenapi-operation %}
-
-{% openapi-operation spec="bytedance-seedance-1-0-pro-fast" path="/v1/video/generations" method="post" %}
-[OpenAPI bytedance-seedance-1-0-pro-fast](https://raw.githubusercontent.com/aimlapi/api-docs/main/docs/api-references/video-models/bytedance/bytedance-seedance-1-0-pro-fast.json)
-{% endopenapi-operation %}
-
-{% openapi-operation spec="bytedance-seedance-1-0-pro-fast" path="/video/generations" method="post" %}
 [OpenAPI bytedance-seedance-1-0-pro-fast](https://raw.githubusercontent.com/aimlapi/api-docs/main/docs/api-references/video-models/bytedance/bytedance-seedance-1-0-pro-fast.json)
 {% endopenapi-operation %}
 
