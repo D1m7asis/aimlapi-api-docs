@@ -16,9 +16,9 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-ERNIE 4.5 21B A3B Thinking is a large language model developed by Baidu (ERNIE) for advanced text and code generation. It is optimized for chat-style interaction and text-to-text tasks, supporting rich natural language understanding and synthesis.
+ERNIE 4.5 21B A3B Thinking is a large language model developed by Baidu (ERNIE) for advanced text generation and understanding. It is designed for chat-style interaction and other text-to-text tasks where coherent, context-aware responses are required.
 
-The model provides an enhanced reasoning mode aimed at complex analytical problems, step-by-step explanations, and tasks that require deeper logical inference compared with more general-purpose conversational models.
+The “Thinking” variant emphasizes enhanced reasoning capabilities, making it suitable for complex questions, multi-step problem solving, and tasks that benefit from more deliberate, structured analysis of user inputs.
 
 ## How to Make a Call
 
