@@ -16,9 +16,9 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-ERNIE 4.5 21B A3B Thinking is a large language model developed by Baidu (ERNIE) for advanced text and code generation. It is designed to handle complex analytical tasks with stronger reasoning capabilities than standard text models.
+ERNIE 4.5 21B A3B Thinking is a large language model developed by Baidu (ERNIE) for advanced text and code generation. It is optimized for chat-style interaction and text-to-text tasks, supporting rich natural language understanding and synthesis.
 
-The model is well suited for applications that require detailed, step-by-step reasoning, such as problem solving, structured content generation, and in-depth analytical writing, while maintaining natural language fluency for chat-style interactions.
+The model provides an enhanced reasoning mode aimed at complex analytical problems, step-by-step explanations, and tasks that require deeper logical inference compared with more general-purpose conversational models.
 
 ## How to Make a Call
 
@@ -58,8 +58,8 @@ If you need a more detailed walkthrough for setting up your development environm
 
 Generate chat-based text completions from a list of messages.
 
-{% openapi-operation spec="baidu-ernie-4.5-21b-a3b-thinking" path="/v1/chat/completions" method="post" %}
-[OpenAPI baidu-ernie-4.5-21b-a3b-thinking](https://raw.githubusercontent.com/aimlapi/api-docs/main/docs/api-references/text-models-llm/baidu/baidu-ernie-4.5-21b-a3b-thinking.json)
+{% openapi-operation spec="ernie-4.5-21b-a3b-thinking" path="/v1/chat/completions" method="post" %}
+[OpenAPI ernie-4.5-21b-a3b-thinking](https://raw.githubusercontent.com/aimlapi/api-docs/main/docs/api-references/text-models-llm/baidu/ernie-4.5-21b-a3b-thinking.json)
 {% endopenapi-operation %}
 
 ## Code Example
