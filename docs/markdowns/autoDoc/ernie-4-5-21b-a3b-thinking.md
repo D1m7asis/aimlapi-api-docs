@@ -6,19 +6,19 @@
 This documentation is valid for the following list of our models:
 
 * `baidu/ernie-4.5-21b-a3b-thinking`
-  {% endhint %}
-  {% endcolumn %}
+{% endhint %}
+{% endcolumn %}
 
 {% column width="33.33333333333334%" %}
-<a href="https://aimlapi.com/app/?model=baidu/ernie-4.5-21b-a3b-thinking" class="button primary">Try in Playground</a>
+<a href="https://aimlapi.com/app/baidu/ernie-4-5-21b-a3b-thinking" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 
 ## Model Overview
 
-ERNIE 4.5 21B A3B Thinking is a large language model developed by Baidu (ERNIE) for advanced text generation and understanding. It is designed for chat-style interaction and other text-to-text tasks where coherent, context-aware responses are required.
+ERNIE 4.5 21B A3B Thinking is a large language model developed by Baidu (ERNIE) and provided by OpenRouter, optimized for text and code generation with an emphasis on deliberate reasoning. It is designed to handle complex, multi-step text-to-text tasks that require structured analysis and coherent explanations.
 
-The “Thinking” variant emphasizes enhanced reasoning capabilities, making it suitable for complex questions, multi-step problem solving, and tasks that benefit from more deliberate, structured analysis of user inputs.
+The model is well suited for scenarios such as detailed problem solving, algorithm explanation, long-form content creation, and other applications where careful logical reasoning and step-by-step outputs are important.
 
 ## How to Make a Call
 
