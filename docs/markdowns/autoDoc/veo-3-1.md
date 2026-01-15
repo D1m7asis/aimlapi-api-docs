@@ -145,5 +145,3 @@ main();
 {% endcode %}
 
 </details>
-
-<!-- Generated from AA-156 -->
