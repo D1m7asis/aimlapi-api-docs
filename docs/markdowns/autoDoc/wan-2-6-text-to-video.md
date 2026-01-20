@@ -16,9 +16,9 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-Wan 2.6 – Text-to-Video is a text-to-video generation model that creates high-quality videos from a single text prompt. It is designed to produce coherent, cinematic-style motion, making it suitable for visually rich storytelling and concept visualization.
+Wan 2.6 – Text-to-Video is a generative video model that creates short cinematic clips from a single text prompt. It is designed to translate detailed natural language descriptions into coherent motion with strong visual consistency across frames.
 
-The model supports 720p and 1080p outputs and operates over text and video modalities, targeting text-to-video generation tasks where temporal consistency and visual detail are important.
+The model focuses on storytelling and visually rich scenes, supporting high-definition outputs at 720p and 1080p. This makes it suitable for concept visualization, creative content production, and rapid prototyping of video ideas directly from text.
 
 ## How to Make a Call
 
@@ -60,6 +60,15 @@ If you need a more detailed walkthrough for setting up your development environm
 
 {% openapi-operation spec="alibaba-wan-2-6-t2v" path="/v2/video/generations" method="post" %}
 [OpenAPI alibaba-wan-2-6-t2v](https://raw.githubusercontent.com/aimlapi/api-docs/main/docs/api-references/video-models/Alibaba-Cloud/alibaba-wan-2-6-t2v.json)
+{% endopenapi-operation %}
+
+### Retrieve the generated video from the server
+
+After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `generation_id`, obtained from the endpoint described above.\
+If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
+
+{% openapi-operation spec="universal-video-endpoint-fetch" path="/v2/video/generations" method="get" %}
+[OpenAPI universal-video-endpoint-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/universal-video-fetch.json)
 {% endopenapi-operation %}
 
 ## Code Example
