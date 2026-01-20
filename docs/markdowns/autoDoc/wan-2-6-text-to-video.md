@@ -16,9 +16,9 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-Wan 2.6 – Text-to-Video is a text-to-video generation model that produces coherent, cinematic video clips from a single text prompt. It is designed to create visually rich and dynamic scenes with smooth motion and consistent composition.
+Wan 2.6 – Text-to-Video is a text-to-video generation model that creates high-quality videos from a single text prompt. It is designed to produce coherent, cinematic-style motion, making it suitable for visually rich storytelling and concept visualization.
 
-The model supports high-definition 720p and 1080p outputs, making it suitable for use cases such as creative content production, concept visualization, and short-form video generation where cinematic quality and temporal consistency are important.
+The model supports 720p and 1080p outputs and operates over text and video modalities, targeting text-to-video generation tasks where temporal consistency and visual detail are important.
 
 ## How to Make a Call
 
@@ -56,7 +56,7 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-Generate videos from prompts and/or media inputs (provider-dependent).
+### Submit a video generation request (create a new job).
 
 {% openapi-operation spec="alibaba-wan-2-6-t2v" path="/v2/video/generations" method="post" %}
 [OpenAPI alibaba-wan-2-6-t2v](https://raw.githubusercontent.com/aimlapi/api-docs/main/docs/api-references/video-models/Alibaba-Cloud/alibaba-wan-2-6-t2v.json)
