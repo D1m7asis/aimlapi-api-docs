@@ -6,19 +6,19 @@
 This documentation is valid for the following list of our models:
 
 * `alibaba/wan-2-6-t2v`
-  {% endhint %}
-  {% endcolumn %}
+{% endhint %}
+{% endcolumn %}
 
 {% column width="33.33333333333334%" %}
-<a href="https://aimlapi.com/app/alibaba/wan-2-6-text-to-video" class="button primary">Try in Playground</a>
+<a href="https://aimlapi.com/app/alibaba/wan-2-6-t2v" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 
 ## Model Overview
 
-Wan 2.6 – Text-to-Video is a generative video model developed by Alibaba (Wan) and provided through Alibaba Cloud’s Model Studio. It creates complete video clips from a single text prompt, focusing on high-quality rendering with coherent, cinematic-style motion throughout the sequence.
+Wan 2.6 – Text-to-Video is a generative video model that creates cinematic-style clips directly from a single natural language prompt. It supports both 720p and 1080p resolutions, enabling visually detailed, coherent motion suitable for high-quality storytelling and creative content.
 
-The model supports 720p and 1080p video output, making it suitable for tasks like concept visualization, cinematic prototyping, marketing assets, and creative content generation where smooth motion and visual consistency are important.
+Developed by Alibaba (Wan), the model is designed for text-to-video workflows where users specify scenes, actions, and aesthetics in text, and receive fully rendered video sequences aligned with those descriptions. This makes it well-suited for tasks such as concept visualization, creative direction, and rapid prototyping of video ideas.
 
 ## How to Make a Call
 
