@@ -16,9 +16,9 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-Wan 2.6 – Text-to-Video is a generative video model that creates cinematic-style clips directly from a single natural language prompt. It supports both 720p and 1080p resolutions, enabling visually detailed, coherent motion suitable for high-quality storytelling and creative content.
+Wan 2.6 – Text-to-Video is a text-to-video generation model that produces coherent, cinematic video clips from a single text prompt. It is designed to create visually rich and dynamic scenes with smooth motion and consistent composition.
 
-Developed by Alibaba (Wan), the model is designed for text-to-video workflows where users specify scenes, actions, and aesthetics in text, and receive fully rendered video sequences aligned with those descriptions. This makes it well-suited for tasks such as concept visualization, creative direction, and rapid prototyping of video ideas.
+The model supports high-definition 720p and 1080p outputs, making it suitable for use cases such as creative content production, concept visualization, and short-form video generation where cinematic quality and temporal consistency are important.
 
 ## How to Make a Call
 
@@ -67,13 +67,40 @@ Generate videos from prompts and/or media inputs (provider-dependent).
 {% tabs %}{% tab title="Python" %}{% code overflow="wrap" %}
 
 ```python
+import requests
 
+def main():
+    url = "https://api.aimlapi.com/v2/video/generations"
+    payload = {
+        "model": "alibaba/wan-2-6-t2v",
+        "prompt": "A DJ on the stand is playing, around a World War II battlefield, lots of explosions, thousands of dancing soldiers, between tanks shooting, barbed wire fences, lots of smoke and fire, black and white old video: hyper realistic, photorealistic, photography, super detailed, very sharp, on a very white background"
+    }
+    headers = {"Authorization": "Bearer <YOUR_API_KEY>", "Content-Type": "application/json"}
+    response = requests.post(url, json=payload, headers=headers)
+    print("Generation:", response.json())
+
+if __name__ == "__main__":
+    main()
 ```
 
 {% endcode %}{% endtab %}{% tab title="JavaScript" %}{% code overflow="wrap" %}
 
 ```javascript
-
+const main = async () => {
+  const response = await fetch('https://api.aimlapi.com/v2/video/generations', {
+    method: 'POST',
+    headers: {
+      Authorization: 'Bearer <YOUR_API_KEY>',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: 'alibaba/wan-2-6-t2v',
+      prompt: 'A DJ on the stand is playing, around a World War II battlefield, lots of explosions, thousands of dancing soldiers, between tanks shooting, barbed wire fences, lots of smoke and fire, black and white old video: hyper realistic, photorealistic, photography, super detailed, very sharp, on a very white background',
+    }),
+  }).then((res) => res.json());
+  console.log('Generation:', response);
+};
+main();
 ```
 
 {% endcode %}{% endtab %}{% endtabs %}
@@ -84,22 +111,12 @@ Generate videos from prompts and/or media inputs (provider-dependent).
 
 {% code overflow="wrap" %}
 
-```json5
+```json
 {
-  'id': 'gen-1733832000-example',
-  'object': 'image',
-  'created': 1733832000,
-  'model': 'alibaba/wan-2-6-t2v',
-  'data': [
-    {
-      'url': 'https://cdn.aimlapi.com/generated-images/alibaba/wan-2-6-t2v/example-output.png',
-      'revised_prompt': 'Example output for documentation.'
-    }
-  ],
-  'usage': {
-    'prompt_tokens': 0,
-    'completion_tokens': 0,
-    'total_tokens': 0
+  "id": "N36BMqdLR8Zm5WgE68xwK",
+  "status": "completed",
+  "video": {
+    "url": "https://cdn.aimlapi.com/albatrosse/1d/31/20251219/7f086db1/8d5ff143-8dae-40cc-91bc-45063bf14347.mp4?Expires=1766170840&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=tzjTHpsJnznD1rCD2AGK%2BOekI7M%3D"
   }
 }
 ```
