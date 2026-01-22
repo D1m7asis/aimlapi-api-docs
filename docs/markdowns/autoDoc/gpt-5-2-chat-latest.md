@@ -16,9 +16,9 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-GPT-5.2 Chat Latest is a production-focused alias that tracks the current stable GPT-5.2 release, making it suitable when you want automatic access to the latest recommended version without committing to a fixed model identifier. It is developed by OpenAI and targets text and code workloads.
+GPT-5.2 Chat Latest is a stable production alias that automatically tracks the current GPT‑5.2 release, providing a forward-compatible choice when you do not require a fixed model identifier. It is designed for general-purpose text and code generation with strong reasoning and assistant-style behavior.
 
-The model maintains the capabilities of GPT-5.2, including advanced reasoning, code generation, and data analysis, while transparently incorporating quality and performance improvements over time for chat-completion and response generation tasks.
+Developed by OpenAI, this model is suitable for chat-oriented and response-generation workloads where you want to receive non-breaking improvements over time without changing the configured model ID.
 
 ## How to Make a Call
 
