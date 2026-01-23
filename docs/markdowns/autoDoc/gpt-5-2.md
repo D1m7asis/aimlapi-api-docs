@@ -16,9 +16,9 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-GPT-5.2 is a flagship general-purpose large language model developed by OpenAI, designed for high-end text and code workloads. It focuses on strong reasoning capability, high performance on complex tasks, and low-latency responses.
+GPT-5.2 is a flagship general-purpose language model developed by OpenAI, designed for high-performance text and code workloads. It builds on previous GPT generations with stronger reasoning capabilities, better handling of complex tasks, and improved latency.
 
-The model is well suited for applications involving advanced reasoning, code generation, data analysis, and tool- or API-orchestrated workflows, making it a strong default choice for modern chat and text-based systems that require robust, versatile intelligence.
+The model is suitable for applications such as advanced reasoning, code generation, data analysis, and workflows that rely on tool or API integration. It is intended as a strong default choice for modern text-centric and chat-based systems that require robust, versatile intelligence across a wide range of domains.
 
 ## How to Make a Call
 
