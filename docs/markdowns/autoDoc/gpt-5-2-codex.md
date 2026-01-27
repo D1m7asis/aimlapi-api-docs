@@ -16,9 +16,9 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-GPT-5.2-Codex is a large language model developed by OpenAI, specialized for advanced coding and long-horizon software engineering tasks. It is designed to handle complex, multi-step workflows such as refactoring extensive codebases, implementing features across many files, and supporting agentic coding systems that require sustained reasoning over large contexts.
+GPT-5.2-Codex is a large language model developed by OpenAI that specializes in software engineering and code-centric workloads. It focuses on complex, long-running development tasks such as multi-step refactoring, feature implementation, and in-depth debugging, while maintaining strong general-purpose reasoning capabilities.
 
-The model accepts both text and image inputs and produces text outputs, enabling scenarios like interpreting code snippets, diagrams, and UI screenshots alongside natural language instructions. With support for adjustable reasoning effort and a context window of up to 400,000 tokens, it is well suited for large-scale code understanding, generation, and modification in demanding engineering environments.
+The model supports text, code, and image inputs, enabling workflows that combine natural language, source code, and visual artifacts like diagrams or UI screenshots. With a context window of up to 400,000 tokens, it is suited for working over large codebases and detailed specifications, making it effective for advanced code understanding, generation, and analysis scenarios.
 
 ## How to Make a Call
 
@@ -29,7 +29,7 @@ The model accepts both text and image inputs and produces text outputs, enabling
 :digit_one: **Setup You Can’t Skip**
 
 - [**Create an Account**](https://aimlapi.com/app/sign-up): Visit the AI/ML API website and create an account (if you don’t have one yet).  
-- [**Generate an API Key**](https://aimlapi.com/app/keys): After logging in, navigate to your account dashboard and generate your API key. Ensure the key is enabled on the UI.  
+- [**Generate an API Key**](https://aimlapi.com/app/keys): After logging in, navigate to your account dashboard and generate your API key. Ensure the key is enabled on the UI.
 
 :digit_two: **Copy the code example**
 
@@ -38,7 +38,7 @@ At the bottom of this page, you'll find a code example that shows how to structu
 :digit_three: **Modify the code example**
 
 - Replace `<YOUR_AIMLAPI_KEY>` with your actual AI/ML API key.  
-- Adjust the input field used by this model (for example, prompt, input text, instructions, media source, or other model-specific input) to match your request.  
+- Adjust the input field used by this model (for example, prompt, input text, instructions, media source, or other model-specific input) to match your request.
 
 :digit_four: <sup><sub><mark style="background-color:yellow;">**(Optional)**</mark></sub></sup> **Adjust other optional parameters if needed**
 
