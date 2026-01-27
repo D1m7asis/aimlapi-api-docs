@@ -16,9 +16,9 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-GPT-5.2 Pro is an enhanced variant of GPT‑5.2 designed for demanding production environments, offering higher operational limits and prioritized capacity for sustained high-load usage. It is suitable for applications that require robust text and code generation with consistent performance under heavy traffic.
+GPT-5.2 Pro is an enhanced variant of GPT-5.2 designed for demanding, high-load production environments where higher limits and consistent performance are critical. It targets large-scale applications that need dependable behavior under heavy traffic and complex workloads.
 
-Developed by OpenAI, this large language model targets response-style workflows where reliable throughput, lower latency, and support for more resource-intensive reasoning and generation are important for complex enterprise workloads.
+As a large language model focused on text and code, it is suitable for generating and refining natural language, producing and analyzing source code, and supporting advanced reasoning workflows, while emphasizing reliability and capacity for sustained throughput.
 
 ## How to Make a Call
 
@@ -114,5 +114,3 @@ main();
 {% endcode %}
 
 </details>
-
-<!-- Generated from AA-238 -->
