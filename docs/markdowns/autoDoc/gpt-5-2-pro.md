@@ -16,9 +16,9 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-GPT-5.2 Pro is an enhanced version of GPT-5.2 designed for demanding, high-load production use cases. It emphasizes higher operational limits and priority access to compute resources, making it suitable for large-scale deployments and complex workloads that need consistent performance under heavy traffic.
+GPT-5.2 Pro is an advanced configuration of the GPT-5.2 series, offering increased limits and prioritized capacity for demanding production scenarios. It is designed for applications that need reliable performance at scale, such as high-traffic systems, complex reasoning workflows, and large automation pipelines.
 
-As a large language model focused on text and code generation, it supports advanced reasoning, robust coding assistance, and data processing workflows while prioritizing reliability and throughput. Developed by OpenAI, GPT-5.2 Pro is intended for teams that require elevated capacity and more predictable behavior in intensive, production-grade environments.
+Developed by OpenAI, this large language model focuses on high-quality text and code generation, maintaining the general-purpose reasoning, coding, and analytical capabilities of GPT-5.2 while emphasizing robustness and consistency under heavy load.
 
 ## How to Make a Call
 
@@ -53,6 +53,14 @@ If you need a more detailed walkthrough for setting up your development environm
 {% endhint %}
 
 </details>
+
+## API Schema
+
+### Generate model responses for text and multi-modal inputs using the unified Responses API.
+
+{% openapi-operation spec="gpt-5-2-pro" path="/v1/responses" method="post" %}
+[OpenAPI gpt-5-2-pro](https://raw.githubusercontent.com/aimlapi/api-docs/main/docs/api-references/text-models-llm/OpenAI/gpt-5-2-pro.json)
+{% endopenapi-operation %}
 
 ## Code Example
 
