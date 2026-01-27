@@ -1,4 +1,4 @@
-# GPT-5.2-Codex
+# GPT-5.2 Codex
 
 {% columns %}
 {% column width="66.66666666666666%" %}
@@ -16,9 +16,9 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-GPT-5.2-Codex is a large language model developed by OpenAI that specializes in software engineering and code-centric workloads. It focuses on complex, long-running development tasks such as multi-step refactoring, feature implementation, and in-depth debugging, while maintaining strong general-purpose reasoning capabilities.
+GPT-5.2 Codex is a large language model developed by OpenAI, focused on advanced software engineering workflows and long-horizon coding tasks. It is designed to handle complex reasoning over large codebases and specifications, with support for configurable reasoning depth to balance speed and thoroughness.
 
-The model supports text, code, and image inputs, enabling workflows that combine natural language, source code, and visual artifacts like diagrams or UI screenshots. With a context window of up to 400,000 tokens, it is suited for working over large codebases and detailed specifications, making it effective for advanced code understanding, generation, and analysis scenarios.
+The model supports text, image, and code modalities as input, producing text outputs suitable for code generation, refactoring, debugging, and explaining code or visual artifacts such as diagrams or screenshots. With a context window of up to 400,000 tokens, it can maintain coherence across extensive technical documents and multi-step development processes.
 
 ## How to Make a Call
 
