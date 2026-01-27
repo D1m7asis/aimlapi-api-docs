@@ -16,9 +16,9 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-GPT-5.2 Chat Latest is a production-ready alias that automatically tracks the current stable GPT-5.2 release, making it suitable when you want an up-to-date model without committing to a specific version identifier. It is developed by OpenAI and targets text and code generation workloads.
+GPT-5.2 Chat Latest is a production-focused alias that continuously tracks the current stable GPT-5.2 release, making it suitable for workloads where you want to benefit from ongoing quality and performance improvements without managing explicit version upgrades. It is intended for scenarios where strict pinning to a specific model revision is not required.
 
-The model is designed for general-purpose chat-completion and response-generation tasks, including reasoning, coding assistance, and analytical prompts. By relying on this alias, applications can inherit ongoing quality and behavior refinements to the GPT-5.2 family while maintaining a consistent integration surface.
+As a large language model developed by OpenAI, it supports text and code modalities with strong capabilities in reasoning, conversational responses, coding assistance, and related general-purpose language tasks. This alias is recommended when you prefer a managed, up-to-date configuration that maintains stability while incorporating incremental enhancements to the underlying GPT-5.2 family.
 
 ## How to Make a Call
 
@@ -53,6 +53,14 @@ If you need a more detailed walkthrough for setting up your development environm
 {% endhint %}
 
 </details>
+
+## API Schema
+
+### Generate chat-based text completions from a list of messages.
+
+{% openapi-operation spec="gpt-5-2-chat-latest" path="/v1/chat/completions" method="post" %}
+[OpenAPI gpt-5-2-chat-latest](https://raw.githubusercontent.com/aimlapi/api-docs/main/docs/api-references/text-models-llm/OpenAI/gpt-5-2-chat-latest.json)
+{% endopenapi-operation %}
 
 ## Code Example
 
