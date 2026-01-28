@@ -16,9 +16,9 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-GPT-5.2 is a general-purpose large language model developed by OpenAI, focused on high-quality reasoning, code generation, data analysis, and structured tool use. It iterates on earlier GPT-4.1 and GPT-5.1 generations with enhancements in reasoning accuracy and response speed for text-based workloads.
+GPT-5.2 is a flagship general-purpose language model developed by OpenAI, designed for high-quality text and code generation, advanced reasoning, and data analysis. It builds on previous GPT generations with improved reasoning quality and faster performance, making it suitable for demanding production use cases.
 
-The model is designed for production scenarios that demand strong overall capability, reliability, and low latency. It supports a broad range of text-oriented tasks such as advanced question answering, software development assistance, analytical report generation, and orchestration of tools within larger agentic systems.
+The model supports tasks such as chat-style interactions and structured response generation, and is well-suited for applications that require robust problem solving, accurate coding assistance, and reliable analytical outputs across a wide range of domains.
 
 ## How to Make a Call
 
@@ -123,7 +123,7 @@ const data = await response.json()
 
 ```json
 {
-  "model": "openai/gpt-5-2-pro"
+  "model": "openai/gpt-5-2"
 }
 ```
 
