@@ -6,8 +6,8 @@
 This documentation is valid for the following list of our models:
 
 * `deepseek/deepseek-v3.2-speciale`
-  {% endhint %}
-  {% endcolumn %}
+{% endhint %}
+{% endcolumn %}
 
 {% column width="33.33333333333334%" %}
 <a href="https://aimlapi.com/app/deepseek/deepseek-v3.2-speciale" class="button primary">Try in Playground</a>
@@ -16,9 +16,9 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-DeepSeek-V3.2-Speciale is an experimental large language model developed by DeepSeek, focused on advanced reasoning over long text and code inputs. It is optimized for complex analytical tasks and can handle contexts up to 128,000 tokens, making it suitable for workflows that involve extensive documents, multi-step problem solving, or structured reasoning pipelines.
+DeepSeek-V3.2-Speciale is an experimental large language model focused on high-quality reasoning for complex text and code tasks. Developed by DeepSeek, it is tuned for challenging analytical problems and can work with extended inputs up to 128K tokens, making it suitable for long-form context and multi-step problem solving.
 
-The model supports tool calling as well as prefix and fill-in-the-middle style completions following the DeepSeek specification. It is provided in a thinking-oriented configuration intended for high-quality chain-of-thought style processing in demanding reasoning use cases.
+The model emphasizes deliberate, stepwise reasoning over lightweight responses and supports advanced behaviors such as tool calling and structured completion patterns like prefix and fill-in-the-middle. It is offered as a time-limited Speciale variant intended primarily for experimentation and high-accuracy reasoning workloads rather than long-term general-purpose deployment.
 
 ## How to Make a Call
 
@@ -28,8 +28,8 @@ The model supports tool calling as well as prefix and fill-in-the-middle style c
 
 :digit_one: **Setup You Can’t Skip**
 
-:black_small_square: [**Create an Account**](https://aimlapi.com/app/sign-up): Visit the AI/ML API website and create an account (if you don’t have one yet).  
-:black_small_square: [**Generate an API Key**](https://aimlapi.com/app/keys): After logging in, navigate to your account dashboard and generate your API key. Ensure the key is enabled on the UI.
+- [**Create an Account**](https://aimlapi.com/app/sign-up): Visit the AI/ML API website and create an account (if you don’t have one yet).  
+- [**Generate an API Key**](https://aimlapi.com/app/keys): After logging in, navigate to your account dashboard and generate your API key. Ensure the key is enabled on the UI.
 
 :digit_two: **Copy the code example**
 
@@ -37,8 +37,8 @@ At the bottom of this page, you'll find a code example that shows how to structu
 
 :digit_three: **Modify the code example**
 
-:black_small_square: Replace `<YOUR_AIMLAPI_KEY>` with your actual AI/ML API key.  
-:black_small_square: Adjust the input field used by this model (for example, prompt, input text, instructions, media source, or other model-specific input) to match your request.
+- Replace `<YOUR_AIMLAPI_KEY>` with your actual AI/ML API key.  
+- Adjust the input field used by this model (for example, prompt, input text, instructions, media source, or other model-specific input) to match your request.
 
 :digit_four: <sup><sub><mark style="background-color:yellow;">**(Optional)**</mark></sub></sup> **Adjust other optional parameters if needed**
 
@@ -54,70 +54,52 @@ If you need a more detailed walkthrough for setting up your development environm
 
 </details>
 
-## API Schema
-
-{% openapi-operation spec="deepseek-v3-2-speciale" path="/v1/chat/completions" method="post" %}
-[OpenAPI deepseek-v3-2-speciale](https://raw.githubusercontent.com/aimlapi/api-docs/main/docs/api-references/text-models-llm/deepseek/deepseek-v3-2-speciale.json)
-{% endopenapi-operation %}
-
-{% openapi-operation spec="deepseek-v3-2-speciale" path="/chat/completions" method="post" %}
-[OpenAPI deepseek-v3-2-speciale](https://raw.githubusercontent.com/aimlapi/api-docs/main/docs/api-references/text-models-llm/deepseek/deepseek-v3-2-speciale.json)
-{% endopenapi-operation %}
-
 ## Code Example
 
 {% tabs %}{% tab title="Python" %}{% code overflow="wrap" %}
 
 ```python
 import requests
-
 response = requests.post(
     "https://api.aimlapi.com/v1/chat/completions",
     headers={
-        "Content-Type":"application/json", 
-        "Authorization":"Bearer <YOUR_AIMLAPI_KEY>",
+      "Authorization":"Bearer <YOUR_AIMLAPI_KEY>",
+      "Content-Type":"application/json"
     },
-    json={
-        "model":"deepseek/deepseek-v3.2-speciale",
-        "messages":[
-            {
-                "role":"user",
-                "content":"Hello"
-            }
-        ]
-    }
+    data=json.dumps({
+     "model": "deepseek/deepseek-v3.2-speciale",
+     "messages": [
+        {
+          "role": "user",
+          "content": "How to learn javascript?"
+        }
+      ],
+      "stream": False,
+    })
 )
-
 data = response.json()
-print(data)
 ```
 
 {% endcode %}{% endtab %}{% tab title="JavaScript" %}{% code overflow="wrap" %}
 
 ```javascript
-async function main() {
-  const response = await fetch('https://api.aimlapi.com/v1/chat/completions', {
+const response = await fetch('https://api.aimlapi.com/v1/chat/completions', {
     method: 'POST',
     headers: {
-      'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
-      'Content-Type': 'application/json',
+      "Authorization": "Bearer <YOUR_AIMLAPI_KEY>",
+      "Content-Type": "application/json"
     },
     body: JSON.stringify({
-      model: 'deepseek/deepseek-v3.2-speciale',
-      messages:[
+      "model": "deepseek/deepseek-v3.2-speciale",
+      "messages": [
           {
-              role:'user',
-              content: 'Hello'
+            "role": "user",
+            "content": "How to learn javascript?"
           }
-      ]
-    }),
-  });
-
-  const data = await response.json();
-  console.log(JSON.stringify(data, null, 2));
-}
-
-main();
+        ],
+        "stream": false,
+});
+const data = await response.json();
 ```
 
 {% endcode %}{% endtab %}{% endtabs %}
@@ -128,28 +110,12 @@ main();
 
 {% code overflow="wrap" %}
 
-```json5
+```json
 {
-  'id': 'gen-1733832000-example',
-  'object': 'image',
-  'created': 1733832000,
-  'model': 'deepseek/deepseek-v3.2-speciale',
-  'data': [
-    {
-      'url': 'https://cdn.aimlapi.com/generated-images/deepseek/deepseek-v3.2-speciale/example-output.png',
-      'revised_prompt': 'Example output for documentation.'
-    }
-  ],
-  'usage': {
-    'prompt_tokens': 0,
-    'completion_tokens': 0,
-    'total_tokens': 0
-  }
+  "model": "deepseek/deepseek-v3.2-speciale"
 }
 ```
 
 {% endcode %}
 
 </details>
-
-<!-- Generated from AA-230 -->
