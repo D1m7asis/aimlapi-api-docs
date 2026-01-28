@@ -16,9 +16,9 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-DeepSeek-V3.2-Speciale is an experimental, reasoning-centric large language model developed by DeepSeek, designed for complex problem solving over long contexts of up to 128K tokens. It focuses on structured, stepwise reasoning rather than lightweight responses, making it suitable for demanding analytical and logic-heavy workloads.
+DeepSeek-V3.2-Speciale is an experimental reasoning-focused large language model developed by DeepSeek, designed around a dedicated thinking-only mode. It targets complex, multi-step reasoning tasks and workloads that require handling long contexts of up to 128K tokens, making it suitable for demanding analytical and planning scenarios.
 
-The model supports both natural language and code generation, with capabilities such as tool calling and support for Chat Prefix and Fill-in-the-Middle (FIM) style completion following DeepSeek’s specification. This Speciale variant is offered as a time-limited endpoint intended primarily for experimentation and high-accuracy reasoning scenarios rather than long-term, general-purpose deployment.
+The model works with text and code, offering improved reliability on challenging queries and support for advanced features such as tool calling and Chat Prefix/FIM-style completion as defined in the DeepSeek specification. It is primarily intended for experimentation and advanced reasoning use cases rather than broad, long-term production deployment.
 
 ## How to Make a Call
 
@@ -53,6 +53,29 @@ If you need a more detailed walkthrough for setting up your development environm
 {% endhint %}
 
 </details>
+
+## API Schema
+
+### Submit a video generation request (create a new job).
+
+{% openapi-operation spec="deepseek-v3.2-speciale" path="/v2/video/generations" method="post" %}
+[OpenAPI deepseek-v3.2-speciale](https://raw.githubusercontent.com/aimlapi/api-docs/main/docs/api-references/text-models-llm/DeepSeek/deepseek-v3.2-speciale.json)
+{% endopenapi-operation %}
+
+### Generate model responses for text and multi-modal inputs using the unified Responses API.
+
+{% openapi-operation spec="deepseek-v3.2-speciale" path="/v1/responses" method="post" %}
+[OpenAPI deepseek-v3.2-speciale](https://raw.githubusercontent.com/aimlapi/api-docs/main/docs/api-references/text-models-llm/DeepSeek/deepseek-v3.2-speciale.json)
+{% endopenapi-operation %}
+
+### Retrieve the generated video from the server
+
+After sending a request for video generation, this task is added to the queue. This endpoint lets you check the status of a video generation task using its `generation_id`, obtained from the endpoint described above.\
+If the video generation task status is `complete`, the response will include the final result — with the generated video URL and additional metadata.
+
+{% openapi-operation spec="universal-video-endpoint-fetch" path="/v2/video/generations" method="get" %}
+[OpenAPI universal-video-endpoint-fetch](https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/video-models/universal-video-fetch.json)
+{% endopenapi-operation %}
 
 ## Code Example
 
