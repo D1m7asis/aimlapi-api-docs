@@ -16,9 +16,9 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-Veo 3.1 Fast Extend Video is a high-speed video extension model for video-to-video workflows, designed to continue existing clips while maintaining the original visual style and motion characteristics. It focuses on rapid iteration and efficiency, making it well-suited for scenarios where turnaround time and cost are more important than maximum visual fidelity.
+Veo 3.1 Fast Extend Video is a video-to-video extension model designed to continue existing clips in a consistent visual style and motion while prioritizing speed and cost efficiency. It focuses on quickly generating extended segments that align with the look and feel of the source footage.
 
-Developed by Google, this variant supports both audio-enabled and audio-muted output for the extended segment, allowing flexible control over sound in the generated portion. It is particularly useful for extending shots, creating alternate versions of a sequence, and quickly testing different continuation ideas for existing footage.
+The model supports both audio-enabled and audio-disabled generation, allowing you to extend only the visuals or produce matching audio as well. This makes it well-suited for rapid prototyping, creative experimentation, and production workflows where fast iteration and budget control are important.
 
 ## How to Make a Call
 
