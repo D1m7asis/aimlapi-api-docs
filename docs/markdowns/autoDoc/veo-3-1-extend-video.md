@@ -16,9 +16,9 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-Veo 3.1 Extend Video is a video extension model that continues existing clips while preserving the original style, motion, and scene dynamics. It is designed for video-to-video workflows where you need longer sequences built seamlessly from a source segment.
+Veo 3.1 Extend Video is a video-to-video generation model for extending existing clips while preserving the original style, motion, and overall visual dynamics. It is designed to continue a scene from a provided source video, producing additional footage that feels like a natural continuation.
 
-Developed by Google, the model supports both visual-only and audio-enabled generations, allowing you to extend short clips, reels, or scenes and optionally generate audio that matches the pacing and overall feel of the original content.
+Developed by Google, the model supports both audio-enabled and audio-disabled modes, allowing you to generate extended segments either silently or with new audio that aligns with the input clip. It is well suited for lengthening shots, creating smooth transitions between segments, and adding extra context around existing footage while maintaining temporal and visual consistency.
 
 ## How to Make a Call
 
