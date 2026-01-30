@@ -10,15 +10,15 @@ This documentation is valid for the following list of our models:
 {% endcolumn %}
 
 {% column width="33.33333333333334%" %}
-<a href="https://aimlapi.com/app/alibaba/wan-2-6-image-generation" class="button primary">Try in Playground</a>
+<a href="https://aimlapi.com/app/alibaba/wan-2-6-image" class="button primary">Try in Playground</a>
 {% endcolumn %}
 {% endcolumns %}
 
 ## Model Overview
 
-Wan 2.6 – Image generation is an image-focused model developed by Alibaba that supports both text-to-image and image-to-image workflows. It is designed to generate new images from natural language prompts and to apply targeted edits to existing visuals.
+Wan 2.6 – Image generation is an image model for creating and editing images from text prompts and combinations of text with reference images. It supports flexible image-conditioning workflows to control composition, style, and specific visual elements while still following natural language instructions.
 
-The model can work with mixed text and image inputs, making it suitable for use cases like style transfer, compositing multiple reference images, or refining details in a scene while preserving the overall layout. This flexibility enables creative, multi-step image-conditioning pipelines for design, illustration, and content creation tasks.
+Developed by Alibaba (Wan), the model is suited to creative image synthesis, compositing multiple source images into a single scene, and refining or transforming existing images based on detailed prompts, making it useful for both concept exploration and production-quality visual content.
 
 ## How to Make a Call
 
@@ -56,7 +56,7 @@ If you need a more detailed walkthrough for setting up your development environm
 
 ## API Schema
 
-Generate images from prompts and optional parameters (size, format, etc.).
+### Generate images from prompts and optional parameters (size, format, etc.).
 
 {% openapi-operation spec="alibaba-wan-2-6-image" path="/v1/images/generations" method="post" %}
 [OpenAPI alibaba-wan-2-6-image](https://raw.githubusercontent.com/aimlapi/api-docs/main/docs/api-references/image-models/Alibaba-Cloud/alibaba-wan-2-6-image.json)
@@ -67,18 +67,20 @@ Generate images from prompts and optional parameters (size, format, etc.).
 {% tabs %}{% tab title="Python" %}{% code overflow="wrap" %}
 
 ```python
+import json
 import requests
 
 response = requests.post(
     "https://api.aimlapi.com/v1/images/generations",
-    headers={
-        "Content-Type":"application/json", 
-        "Authorization":"Bearer <YOUR_AIMLAPI_KEY>",
-    },
-    json={
-        "model":"alibaba/wan-2-6-image",
-        "prompt": "A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses."
-    }
+    headers={"Authorization":"Bearer <YOUR_AIMLAPI_KEY>","Content-Type":"application/json"},
+    data=json.dumps({
+        "model": "alibaba/wan-2-6-image",
+        "prompt": "Combine the images so the T-Rex is wearing a business suit, sitting in a cozy small café, drinking from the mug. Blur the background slightly to create a bokeh effect.",
+        "image_urls": [
+            "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png",
+            "https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/blue-mug.jpg"
+        ]
+    })
 )
 
 data = response.json()
@@ -88,24 +90,23 @@ print(data)
 {% endcode %}{% endtab %}{% tab title="JavaScript" %}{% code overflow="wrap" %}
 
 ```javascript
-async function main() {
-  const response = await fetch('https://api.aimlapi.com/v1/images/generations', {
-    method: 'POST',
-    headers: {
-      'Authorization': 'Bearer <YOUR_AIMLAPI_KEY>',
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      model: 'alibaba/wan-2-6-image',
-      prompt: 'A T-Rex relaxing on a beach, lying on a sun lounger and wearing sunglasses.',
-    }),
-  });
-
-  const data = await response.json();
-  console.log(JSON.stringify(data, null, 2));
-}
-
-main();
+const response = await fetch('https://api.aimlapi.com/v1/images/generations', {
+  method: 'POST',
+  headers: {
+    Authorization: 'Bearer <YOUR_AIMLAPI_KEY>',
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({
+    model: 'alibaba/wan-2-6-image',
+    prompt:
+      'Combine the images so the T-Rex is wearing a business suit, sitting in a cozy small café, drinking from the mug. Blur the background slightly to create a bokeh effect.',
+    image_urls: [
+      'https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/t-rex.png',
+      'https://raw.githubusercontent.com/aimlapi/api-docs/main/reference-files/blue-mug.jpg',
+    ],
+  }),
+});
+const data = await response.json();
 ```
 
 {% endcode %}{% endtab %}{% endtabs %}
@@ -116,22 +117,18 @@ main();
 
 {% code overflow="wrap" %}
 
-```json5
+```json
 {
-  'id': 'gen-1733832000-example',
-  'object': 'image',
-  'created': 1733832000,
-  'model': 'alibaba/wan-2-6-image',
-  'data': [
+  "created": 1766084513473,
+  "data": [
     {
-      'url': 'https://cdn.aimlapi.com/generated-images/alibaba/wan-2-6-image/example-output.png',
-      'revised_prompt': 'Example output for documentation.'
+      "url": "https://cdn.aimlapi.com/alpaca/1d/19/20251219/4564f4d6/83355458-4abb7102-799b-4ee9-be09-9504406a8194.png?Expires=1766170910&OSSAccessKeyId=LTAI5tRcsWJEymQaTsKbKqGf&Signature=LQsTgsFa4tsNUSjEqUefE1BkjMg%3D"
     }
   ],
-  'usage': {
-    'prompt_tokens': 0,
-    'completion_tokens': 0,
-    'total_tokens': 0
+  "meta": {
+    "usage": {
+      "credits_used": 63000
+    }
   }
 }
 ```
@@ -139,5 +136,3 @@ main();
 {% endcode %}
 
 </details>
-
-<!-- Generated from AD-274 -->
