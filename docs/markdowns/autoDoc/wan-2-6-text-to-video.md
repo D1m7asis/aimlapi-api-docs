@@ -16,9 +16,9 @@ This documentation is valid for the following list of our models:
 
 ## Model Overview
 
-Wan 2.6 – Text-to-Video is a generative video model that creates short cinematic clips from a single text prompt. It is designed to translate detailed natural language descriptions into coherent motion with strong visual consistency across frames.
+Wan 2.6 – Text-to-Video is a generative video model that creates full videos from a single text prompt, focusing on coherent motion, scene consistency, and cinematic-style output. It is designed to translate natural language descriptions into visually rich sequences that preserve narrative and visual continuity across frames.
 
-The model focuses on storytelling and visually rich scenes, supporting high-definition outputs at 720p and 1080p. This makes it suitable for concept visualization, creative content production, and rapid prototyping of video ideas directly from text.
+Supporting 720p and 1080p resolutions, this model is suited for creative storytelling, concept visualization, and promotional or marketing content generation where high-quality, prompt-driven video synthesis is required.
 
 ## How to Make a Call
 
@@ -133,5 +133,3 @@ main();
 {% endcode %}
 
 </details>
-
-<!-- Generated from AD-273 -->
